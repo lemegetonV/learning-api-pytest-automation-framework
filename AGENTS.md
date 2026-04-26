@@ -56,10 +56,10 @@ This is a clean reimplementation of the API testing learning project. The previo
 ```
 
 ## Current Module
-**Module:** Module 03 — Environment Setup
-**Branch:** module-03-environment-setup
-**Status:** In progress
-**Next:** Module 04 — First API Tests
+**Module:** Module 04 — First API Tests
+**Branch:** module-04-first-api-tests
+**Status:** Not started
+**Next:** Module 05 — CRUD Operations
 
 ## Rebuild Scope
 The rebuild keeps the core 15-module path and integrates selected practical topics:
