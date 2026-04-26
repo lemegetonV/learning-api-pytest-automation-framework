@@ -56,10 +56,10 @@ This is a clean reimplementation of the API testing learning project. The previo
 ```
 
 ## Current Module
-**Module:** Module 01 — Python Fundamentals for QA
-**Branch:** module-01-python-fundamentals
-**Status:** In progress
-**Next:** Module 02 — API Fundamentals
+**Module:** Module 02 — API Fundamentals
+**Branch:** module-02-api-fundamentals
+**Status:** Not started
+**Next:** Module 03 — Environment Setup
 
 ## Rebuild Scope
 The rebuild keeps the core 15-module path and integrates selected practical topics:
