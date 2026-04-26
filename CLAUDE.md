@@ -58,7 +58,7 @@ This is a clean reimplementation of the API testing learning project. The previo
 ## Current Module
 **Module:** Module 04 — First API Tests
 **Branch:** module-04-first-api-tests
-**Status:** Not started
+**Status:** In progress
 **Next:** Module 05 — CRUD Operations
 
 ## Rebuild Scope
