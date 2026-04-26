@@ -36,8 +36,11 @@ flowchart TD
 |---|---|
 | `docs/module-02-api-fundamentals/00-module-overview.md` | Module map and quality gate |
 | `docs/module-02-api-fundamentals/01-what-are-apis.md` | API purpose, request/response cycle, and SDET mental model |
-
-Later commits in this module will add focused guides for HTTP, API styles, auth, versioning, and reading documentation.
+| `docs/module-02-api-fundamentals/02-http-requests-responses.md` | HTTP methods, status codes, headers, idempotency, and CRUD mapping |
+| `docs/module-02-api-fundamentals/03-api-styles-and-versioning.md` | REST, SOAP, GraphQL, gRPC, WebSocket, and API versioning |
+| `docs/module-02-api-fundamentals/04-authentication-and-authorization.md` | API keys, Basic auth, Bearer/JWT, OAuth2, cookies, and auth test ideas |
+| `docs/module-02-api-fundamentals/05-reading-api-documentation.md` | How to turn API docs into test matrices |
+| `docs/module-02-api-fundamentals/exercises.md` | Practice tasks for request analysis, status codes, API styles, auth, versioning, and docs |
 
 ## Request/Response Big Picture
 
