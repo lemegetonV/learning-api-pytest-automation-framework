@@ -1,0 +1,1 @@
+"""DummyJSON capstone test package."""

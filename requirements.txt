@@ -1,0 +1,12 @@
+# Core dependencies introduced by Module 03
+pytest==8.3.4
+requests==2.32.3
+
+# Activated in later modules
+# python-dotenv==1.0.1      # Module 07: configuration
+# faker==33.1.0             # Module 09: generated test data
+# jsonschema==4.23.0        # Module 10: schema validation
+# responses==0.25.6         # Module 11: mocking
+# pytest-html==4.1.1        # Module 14: HTML reporting
+# allure-pytest==2.13.5     # Module 14: Allure reporting
+# pytest-xdist==3.6.1       # Module 13+: optional parallel execution strategy
