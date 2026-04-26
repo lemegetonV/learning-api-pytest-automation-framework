@@ -58,7 +58,7 @@ This is a clean reimplementation of the API testing learning project. The previo
 ## Current Module
 **Module:** Module 03 — Environment Setup
 **Branch:** module-03-environment-setup
-**Status:** Not started
+**Status:** In progress
 **Next:** Module 04 — First API Tests
 
 ## Rebuild Scope
