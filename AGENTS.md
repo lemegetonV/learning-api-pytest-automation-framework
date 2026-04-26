@@ -58,7 +58,7 @@ This is a clean reimplementation of the API testing learning project. The previo
 ## Current Module
 **Module:** Module 02 — API Fundamentals
 **Branch:** module-02-api-fundamentals
-**Status:** Not started
+**Status:** In progress
 **Next:** Module 03 — Environment Setup
 
 ## Rebuild Scope
