@@ -103,3 +103,78 @@ Write short answers:
 Expected outcome:
 
 - you can explain Python basics in API testing language, not only as syntax rules
+
+## Exercise 6: Response Validator
+
+Write a function named `validate_response_shape(response_body, required_fields)` that:
+
+- accepts a dictionary and a list or set of required field names
+- returns a tuple: `(is_valid, missing_fields)`
+- uses set operations to detect missing fields
+- uses an f-string to print a readable summary
+
+Hint:
+
+```python
+expected = set(required_fields)
+actual = set(response_body.keys())
+missing = expected - actual
+```
+
+Expected outcome:
+
+- complete response returns `(True, set())`
+- incomplete response returns `(False, {...})`
+
+## Exercise 7: Status Code Classifier
+
+Write a function named `classify_status_code(status_code)` that returns:
+
+- `"success"` for 200-299
+- `"client_error"` for 400-499
+- `"server_error"` for 500-599
+- `"other"` for anything else
+
+Try this once with `if/elif/else`, and optionally again with `match/case`.
+
+Expected outcome:
+
+- `classify_status_code(200)` returns `"success"`
+- `classify_status_code(404)` returns `"client_error"`
+- `classify_status_code(503)` returns `"server_error"`
+
+## Exercise 8: User Data Analyzer
+
+Given a list of user dictionaries, write code that:
+
+- uses a list comprehension to collect all email addresses
+- uses a set to check whether user IDs are unique
+- uses a lambda with `sorted()` to sort users by `id`
+- handles a missing optional `role` field with `.get()`
+
+Expected outcome:
+
+- you can transform list-of-dictionary API data without mutating the original list
+
+## Exercise 9: Retry Simulator
+
+Write a function named `retry_until_success(results, max_attempts=3)`.
+
+`results` is a list of booleans such as:
+
+```python
+[False, False, True]
+```
+
+The function should:
+
+- loop through attempts using `range`
+- stop early when it sees `True`
+- return `True` if a successful attempt happened
+- return `False` otherwise
+- print attempts using f-strings
+
+Expected outcome:
+
+- `[False, True]` returns `True`
+- `[False, False, False]` returns `False`

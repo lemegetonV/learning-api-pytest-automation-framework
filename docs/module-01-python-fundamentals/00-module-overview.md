@@ -12,6 +12,7 @@ By the end of this module, you should be able to:
 - write small functions that make test logic reusable
 - work with lists and dictionaries, the same structures returned by JSON APIs
 - handle expected errors without hiding real bugs
+- recognize common Python idioms used in QA automation code
 
 ## Learning Flow
 
@@ -23,7 +24,8 @@ flowchart TD
   D --> E["Wrap repeated logic in functions"]
   E --> F["Model API-like data with lists and dictionaries"]
   F --> G["Handle expected errors clearly"]
-  G --> H["Practice with QA-focused exercises"]
+  G --> H["Recognize QA automation idioms"]
+  H --> I["Practice with QA-focused exercises"]
 ```
 
 The order matters. A future API test like this:
@@ -58,6 +60,7 @@ is built from Module 01 pieces:
 | `docs/module-01-python-fundamentals/03-functions.md` | Reusable behavior and helper design |
 | `docs/module-01-python-fundamentals/04-data-structures.md` | Lists, dictionaries, tuples, sets, and JSON-shaped data |
 | `docs/module-01-python-fundamentals/05-error-handling.md` | Exceptions, assertions, negative testing, and failure clarity |
+| `docs/module-01-python-fundamentals/06-python-qa-idioms.md` | F-strings, casting, truthiness, `range`, `*args`, lambdas, comprehensions, custom exceptions, and debugging |
 | `docs/module-01-python-fundamentals/exercises.md` | QA-focused practice tasks |
 
 No `src/` or `tests/` implementation files are introduced yet. The real project code begins in Module 03, and API tests begin in Module 04.
@@ -94,6 +97,7 @@ Keeping Module 01 focused prevents a beginner from learning Python syntax and HT
 Module 01 is complete when:
 
 - docs explain Python basics with QA/API examples
+- docs cover the original Python topic set, including f-strings, naming, type checks, casting, truthy/falsy values, `is` vs `==`, `range`, ternary expressions, loop `else`, `match/case`, `*args`, `**kwargs`, lambdas, docstrings, slicing, comprehensions, set operations, custom exceptions, and traceback reading
 - exercises require the learner to write small Python snippets
 - no future-module framework code is introduced
 - `CLAUDE.md` and `AGENTS.md` remain identical
