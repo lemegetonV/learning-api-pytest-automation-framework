@@ -54,6 +54,10 @@ is built from Module 01 pieces:
 |---|---|
 | `docs/module-01-python-fundamentals/00-module-overview.md` | Module map and learning goals |
 | `docs/module-01-python-fundamentals/01-values-variables-and-types.md` | First Python concept guide |
+| `docs/module-01-python-fundamentals/02-control-flow.md` | Decisions, loops, retries, and repeated checks |
+| `docs/module-01-python-fundamentals/03-functions.md` | Reusable behavior and helper design |
+| `docs/module-01-python-fundamentals/04-data-structures.md` | Lists, dictionaries, tuples, sets, and JSON-shaped data |
+| `docs/module-01-python-fundamentals/05-error-handling.md` | Exceptions, assertions, negative testing, and failure clarity |
 | `docs/module-01-python-fundamentals/exercises.md` | QA-focused practice tasks |
 
 No `src/` or `tests/` implementation files are introduced yet. The real project code begins in Module 03, and API tests begin in Module 04.
