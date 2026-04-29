@@ -56,10 +56,10 @@ This is a clean reimplementation of the API testing learning project. The previo
 ```
 
 ## Current Module
-**Module:** Module 07 — Framework Architecture
-**Branch:** module-07-framework-architecture
-**Status:** In progress
-**Next:** Module 08 — Authentication Testing
+**Module:** Module 08 — Authentication Testing
+**Branch:** module-08-authentication-testing
+**Status:** Not started
+**Next:** Module 09 — Data-Driven Testing
 
 ## Rebuild Scope
 The rebuild keeps the core 15-module path and integrates selected practical topics:
