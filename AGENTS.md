@@ -58,7 +58,7 @@ This is a clean reimplementation of the API testing learning project. The previo
 ## Current Module
 **Module:** Module 11 — Advanced Testing
 **Branch:** module-11-advanced-testing
-**Status:** Not started
+**Status:** In progress
 **Next:** Module 12 — Performance & Security
 
 ## Rebuild Scope
