@@ -23,6 +23,28 @@ def test_set_basic_auth_stores_session_credentials() -> None:
     assert client.session.auth == ("learner", "secret")
 
 
+def test_set_bearer_token_clears_existing_basic_auth() -> None:
+    """Switching to Bearer auth should remove Basic auth credentials."""
+    client = APIClient("https://example.test")
+    client.set_basic_auth("learner", "secret")
+
+    client.set_bearer_token("module-08-token")
+
+    assert client.session.auth is None
+    assert client.session.headers["Authorization"] == "Bearer module-08-token"
+
+
+def test_set_basic_auth_clears_existing_bearer_token() -> None:
+    """Switching to Basic auth should remove any Bearer token header."""
+    client = APIClient("https://example.test")
+    client.set_bearer_token("module-08-token")
+
+    client.set_basic_auth("learner", "secret")
+
+    assert "Authorization" not in client.session.headers
+    assert client.session.auth == ("learner", "secret")
+
+
 def test_clear_auth_removes_basic_and_bearer_state() -> None:
     """Tests must be able to remove auth state to avoid cross-test leakage."""
     client = APIClient("https://example.test")

@@ -15,6 +15,7 @@ The helper lives in [`src/api_client/client.py`](../../src/api_client/client.py)
 
 ```python
 def set_basic_auth(self, username: str, password: str) -> None:
+    self.session.headers.pop("Authorization", None)
     self.session.auth = (username, password)
 ```
 
@@ -37,6 +38,7 @@ The framework helper keeps this in one place:
 
 ```python
 def set_bearer_token(self, token: str) -> None:
+    self.session.auth = None
     self.session.headers["Authorization"] = f"Bearer {token}"
 ```
 
@@ -62,7 +64,15 @@ session.headers["Authorization"] = f"Bearer {token}"
 session.auth = (username, password)
 ```
 
-That creates duplication and makes cleanup easy to forget. `APIClient.clear_auth()` exists so tests can remove auth state explicitly when needed.
+That creates duplication and makes cleanup easy to forget. The auth setter methods act as mode switches:
+
+| Method | Auth state after the call |
+| --- | --- |
+| `set_basic_auth(...)` | Basic auth is active and any Bearer header is removed |
+| `set_bearer_token(...)` | Bearer auth is active and any Basic auth tuple is removed |
+| `clear_auth()` | Both Basic auth and Bearer auth are removed |
+
+This matters because `requests` can prepare an `Authorization` header from `session.auth`. If a client kept both Basic auth state and a Bearer header, Basic auth could win at request time. The framework avoids that conflict.
 
 ## Code References
 
@@ -76,4 +86,4 @@ That creates duplication and makes cleanup easy to forget. `APIClient.clear_auth
 - Basic auth is credential-based and easy to demonstrate, but less common in modern public APIs.
 - Bearer tokens are header-based and common in OAuth2/JWT-backed APIs.
 - API keys in query strings are easy to test but risky for secrets.
-- Auth helper methods keep test code focused on behavior.
+- Auth helper methods keep test code focused on behavior and prevent conflicting auth modes.

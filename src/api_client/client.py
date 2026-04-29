@@ -48,10 +48,12 @@ class APIClient:
 
     def set_bearer_token(self, token: str) -> None:
         """Apply a bearer token to all future requests in this client session."""
+        self.session.auth = None
         self.session.headers["Authorization"] = f"Bearer {token}"
 
     def set_basic_auth(self, username: str, password: str) -> None:
         """Apply HTTP Basic authentication to all future requests."""
+        self.session.headers.pop("Authorization", None)
         self.session.auth = (username, password)
 
     def clear_auth(self) -> None:

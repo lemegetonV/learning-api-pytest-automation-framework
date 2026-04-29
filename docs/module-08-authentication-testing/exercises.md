@@ -84,7 +84,8 @@ client.clear_auth()
 
 Expected outcome:
 
-- `client.session.auth` is `None`.
-- `Authorization` is not present in `client.session.headers`.
+- after `set_basic_auth(...)`, `client.session.auth` contains the username/password tuple.
+- after `set_bearer_token(...)`, `client.session.auth` is `None` and the `Authorization` header contains the Bearer token.
+- after `clear_auth()`, `client.session.auth` is `None` and `Authorization` is not present in `client.session.headers`.
 
-Explain why cleanup matters in a shared test session.
+Explain why auth mode switching and cleanup matter in a shared test session.
