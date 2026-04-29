@@ -47,3 +47,14 @@ def api_client() -> APIClient:
     yield client
 
     client.close()
+
+
+@pytest.fixture
+def httpbin_client() -> APIClient:
+    """Function-scoped API client for request-behavior and auth examples."""
+    settings = get_settings()
+    client = APIClient(base_url=settings.httpbin_url, timeout=settings.timeout)
+
+    yield client
+
+    client.close()
