@@ -52,8 +52,15 @@ This is a clean reimplementation of the API testing learning project. The previo
 │   │   ├── test_13_cicd/
 │   │   └── test_14_reporting/
 │   └── dummyjson/
+│       ├── test_auth.py
+│       ├── test_carts.py
+│       ├── test_posts_comments.py
+│       ├── test_products.py
+│       └── test_users.py
 ├── test-data/
 ├── schemas/
+│   ├── dummyjson/
+│   └── jsonplaceholder/
 ├── reports/
 └── .github/workflows/
 ```
@@ -61,7 +68,7 @@ This is a clean reimplementation of the API testing learning project. The previo
 ## Current Module
 **Module:** Module 15 — Capstone
 **Branch:** module-15-capstone
-**Status:** Not started
+**Status:** In progress
 **Next:** Post-capstone extensions
 
 ## Rebuild Scope

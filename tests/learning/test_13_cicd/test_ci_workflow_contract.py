@@ -38,6 +38,7 @@ def test_workflow_supports_selectable_test_scopes() -> None:
     assert "-m smoke" in workflow_text
     assert "-m performance" in workflow_text
     assert "-m security" in workflow_text
+    assert "tests/dummyjson" in workflow_text
 
 
 def test_workflow_documents_optional_parallel_execution() -> None:
@@ -53,6 +54,8 @@ def test_pytest_markers_support_ci_test_selection() -> None:
     assert '"smoke: quick health check tests"' in pyproject_text
     assert '"performance: response-time checks"' in pyproject_text
     assert '"security: introductory security checks"' in pyproject_text
+    assert '"capstone: final DummyJSON capstone tests"' in pyproject_text
+    assert '"dummyjson: tests that target the DummyJSON API"' in pyproject_text
 
 
 def test_xdist_dependency_is_active_for_parallel_ci_strategy() -> None:

@@ -17,6 +17,7 @@ on:
           - smoke
           - performance
           - security
+          - capstone
       parallel:
         description: "Run pytest with xdist"
         required: true
@@ -79,6 +80,9 @@ jobs:
               ;;
             security)
               PYTEST_TARGET="-m security"
+              ;;
+            capstone)
+              PYTEST_TARGET="tests/dummyjson"
               ;;
             *)
               echo "Unknown TEST_SCOPE: $TEST_SCOPE"

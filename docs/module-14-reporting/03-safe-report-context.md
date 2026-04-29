@@ -66,6 +66,12 @@ This protects values such as:
 
 The test `test_response_context_redacts_sensitive_query_values` verifies that URL tokens do not leak into report context.
 
+## JSON Body Redaction
+
+Module 15 extends the same reporting helper for the capstone auth flow. JSON body fields such as `accessToken` and `refreshToken` are redacted before `body_preview` enters report context.
+
+The regression tests live in `tests/learning/test_14_reporting/test_report_body_redaction.py`.
+
 ## Body Preview
 
 Reports should not blindly attach huge response bodies. `truncate_text()` creates a bounded preview:

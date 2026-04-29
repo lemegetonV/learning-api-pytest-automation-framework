@@ -42,7 +42,7 @@ flowchart TD
 | JUnit XML | Produce CI-consumable test result XML | [`.github/workflows/api-tests.yml`](../../.github/workflows/api-tests.yml) |
 | Report artifacts | Upload generated `reports/` files from CI | `actions/upload-artifact@v4` |
 | Safe report context | Attach method, URL, status, request id, headers, and body preview | [`src/utils/reporting.py`](../../src/utils/reporting.py) |
-| Secret redaction | Redact auth headers and sensitive query values | [`src/utils/security.py`](../../src/utils/security.py) |
+| Secret redaction | Redact auth headers, sensitive query values, and token-like JSON body fields | [`src/utils/security.py`](../../src/utils/security.py), [`src/utils/reporting.py`](../../src/utils/reporting.py) |
 | Logging for reports | Verify request/response summary logs | [`test_logging_output.py`](../../tests/learning/test_14_reporting/test_logging_output.py) |
 | Checkpoint review | Report-context flow, artifact responsibilities, failure model, and interview review | [`06-checkpoint-deep-dive.md`](06-checkpoint-deep-dive.md) |
 
