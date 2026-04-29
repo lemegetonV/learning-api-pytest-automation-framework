@@ -56,10 +56,10 @@ This is a clean reimplementation of the API testing learning project. The previo
 ```
 
 ## Current Module
-**Module:** Module 10 — Schema Validation
-**Branch:** module-10-schema-validation
-**Status:** In progress
-**Next:** Module 11 — Advanced Testing
+**Module:** Module 11 — Advanced Testing
+**Branch:** module-11-advanced-testing
+**Status:** Not started
+**Next:** Module 12 — Performance & Security
 
 ## Rebuild Scope
 The rebuild keeps the core 15-module path and integrates selected practical topics:
