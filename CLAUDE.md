@@ -47,7 +47,8 @@ This is a clean reimplementation of the API testing learning project. The previo
 │   │   ├── test_08_auth/
 │   │   ├── test_09_data_driven/
 │   │   ├── test_10_schema/
-│   │   └── test_11_advanced/
+│   │   ├── test_11_advanced/
+│   │   └── test_12_performance_security/
 │   └── dummyjson/
 ├── test-data/
 ├── schemas/
@@ -58,7 +59,7 @@ This is a clean reimplementation of the API testing learning project. The previo
 ## Current Module
 **Module:** Module 12 — Performance & Security
 **Branch:** module-12-performance-security
-**Status:** Not started
+**Status:** In progress
 **Next:** Module 13 — CI/CD Integration
 
 ## Rebuild Scope
