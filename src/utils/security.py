@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Iterable, Mapping
-from urllib.parse import parse_qsl, urlsplit
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 
 DEFAULT_SENSITIVE_HEADER_NAMES = {
@@ -57,6 +57,32 @@ def find_sensitive_query_params(
         if name.lower() in sensitive_lookup and name not in found:
             found.append(name)
     return found
+
+
+def redact_url_query_params(
+    url: str,
+    sensitive_names: Iterable[str] | None = None,
+    replacement: str = "[REDACTED]",
+) -> str:
+    """Return a URL with sensitive query parameter values redacted."""
+    sensitive_lookup = {
+        name.lower() for name in (sensitive_names or DEFAULT_SENSITIVE_QUERY_PARAM_NAMES)
+    }
+    parts = urlsplit(url)
+    query_pairs = parse_qsl(parts.query, keep_blank_values=True)
+    redacted_pairs = [
+        (name, replacement if name.lower() in sensitive_lookup else value)
+        for name, value in query_pairs
+    ]
+    return urlunsplit(
+        (
+            parts.scheme,
+            parts.netloc,
+            parts.path,
+            urlencode(redacted_pairs),
+            parts.fragment,
+        )
+    )
 
 
 def has_header(headers: Mapping[str, str], expected_name: str) -> bool:
