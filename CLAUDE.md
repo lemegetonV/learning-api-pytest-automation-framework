@@ -59,10 +59,10 @@ This is a clean reimplementation of the API testing learning project. The previo
 ```
 
 ## Current Module
-**Module:** Module 14 — Reporting
-**Branch:** module-14-reporting
-**Status:** In progress
-**Next:** Module 15 — Capstone
+**Module:** Module 15 — Capstone
+**Branch:** module-15-capstone
+**Status:** Not started
+**Next:** Post-capstone extensions
 
 ## Rebuild Scope
 The rebuild keeps the core 15-module path and integrates selected practical topics:
