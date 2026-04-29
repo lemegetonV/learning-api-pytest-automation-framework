@@ -56,10 +56,10 @@ This is a clean reimplementation of the API testing learning project. The previo
 ```
 
 ## Current Module
-**Module:** Module 08 — Authentication Testing
-**Branch:** module-08-authentication-testing
-**Status:** In progress
-**Next:** Module 09 — Data-Driven Testing
+**Module:** Module 09 — Data-Driven Testing
+**Branch:** module-09-data-driven-testing
+**Status:** Not started
+**Next:** Module 10 — Schema Validation
 
 ## Rebuild Scope
 The rebuild keeps the core 15-module path and integrates selected practical topics:
