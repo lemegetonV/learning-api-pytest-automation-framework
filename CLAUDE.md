@@ -58,10 +58,10 @@ This is a clean reimplementation of the API testing learning project. The previo
 ```
 
 ## Current Module
-**Module:** Module 13 — CI/CD Integration
-**Branch:** module-13-cicd-integration
-**Status:** In progress
-**Next:** Module 14 — Reporting
+**Module:** Module 14 — Reporting
+**Branch:** module-14-reporting
+**Status:** Not started
+**Next:** Module 15 — Capstone
 
 ## Rebuild Scope
 The rebuild keeps the core 15-module path and integrates selected practical topics:
