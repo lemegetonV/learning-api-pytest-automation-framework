@@ -58,7 +58,7 @@ This is a clean reimplementation of the API testing learning project. The previo
 ## Current Module
 **Module:** Module 07 — Framework Architecture
 **Branch:** module-07-framework-architecture
-**Status:** Not started
+**Status:** In progress
 **Next:** Module 08 — Authentication Testing
 
 ## Rebuild Scope
