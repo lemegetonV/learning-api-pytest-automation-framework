@@ -60,7 +60,7 @@ This is a clean reimplementation of the API testing learning project. The previo
 ## Current Module
 **Module:** Module 14 — Reporting
 **Branch:** module-14-reporting
-**Status:** Not started
+**Status:** In progress
 **Next:** Module 15 — Capstone
 
 ## Rebuild Scope
