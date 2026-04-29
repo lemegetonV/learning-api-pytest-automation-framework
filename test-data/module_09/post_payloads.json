@@ -1,0 +1,28 @@
+[
+  {
+    "case_id": "complete-post",
+    "payload": {
+      "title": "Module 09 data-driven post",
+      "body": "This payload is stored in JSON so the test logic stays small.",
+      "userId": 1
+    },
+    "expected_status": 201
+  },
+  {
+    "case_id": "minimal-title-only",
+    "payload": {
+      "title": "JSONPlaceholder accepts a minimal training payload"
+    },
+    "expected_status": 201
+  },
+  {
+    "case_id": "extra-client-field",
+    "payload": {
+      "title": "Payload with client metadata",
+      "body": "Lenient fake APIs often echo extra fields.",
+      "userId": 2,
+      "source": "module-09"
+    },
+    "expected_status": 201
+  }
+]
