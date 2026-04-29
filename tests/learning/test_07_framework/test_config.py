@@ -7,8 +7,25 @@ import pytest
 from src.config import Settings, get_settings
 
 
-def test_settings_defaults_point_to_learning_apis() -> None:
+def clear_settings_environment(monkeypatch: pytest.MonkeyPatch) -> None:
+    """Remove settings env vars so default-value tests stay deterministic."""
+    for name in (
+        "BASE_URL",
+        "HTTPBIN_URL",
+        "DUMMYJSON_URL",
+        "FAKESTORE_URL",
+        "TEST_TIMEOUT",
+        "TEST_ENV",
+        "LOG_LEVEL",
+    ):
+        monkeypatch.delenv(name, raising=False)
+
+
+def test_settings_defaults_point_to_learning_apis(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
     """Default settings should let the project run without a .env file."""
+    clear_settings_environment(monkeypatch)
     settings = Settings()
 
     assert settings.base_url == "https://jsonplaceholder.typicode.com"
@@ -17,16 +34,18 @@ def test_settings_defaults_point_to_learning_apis() -> None:
     assert settings.fakestore_url == "https://fakestoreapi.com"
 
 
-def test_settings_timeout_is_integer() -> None:
+def test_settings_timeout_is_integer(monkeypatch: pytest.MonkeyPatch) -> None:
     """Timeout should be converted from environment text into an integer."""
+    clear_settings_environment(monkeypatch)
     settings = Settings()
 
     assert isinstance(settings.timeout, int)
     assert settings.timeout == 10
 
 
-def test_get_settings_returns_settings_instance() -> None:
+def test_get_settings_returns_settings_instance(monkeypatch: pytest.MonkeyPatch) -> None:
     """The framework should expose one config entry point."""
+    clear_settings_environment(monkeypatch)
     settings = get_settings()
 
     assert isinstance(settings, Settings)
