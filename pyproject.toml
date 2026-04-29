@@ -19,5 +19,7 @@ markers = [
     "performance: response-time checks",
     "security: introductory security checks",
     "reporting: report and log quality checks",
+    "capstone: final DummyJSON capstone tests",
+    "dummyjson: tests that target the DummyJSON API",
     "e2e: end-to-end workflow tests",
 ]
