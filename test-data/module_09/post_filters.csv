@@ -1,0 +1,4 @@
+case_id,user_id,expected_count
+first-user-posts,1,10
+middle-user-posts,5,10
+last-user-posts,10,10
