@@ -56,10 +56,10 @@ This is a clean reimplementation of the API testing learning project. The previo
 ```
 
 ## Current Module
-**Module:** Module 11 — Advanced Testing
-**Branch:** module-11-advanced-testing
-**Status:** In progress
-**Next:** Module 12 — Performance & Security
+**Module:** Module 12 — Performance & Security
+**Branch:** module-12-performance-security
+**Status:** Not started
+**Next:** Module 13 — CI/CD Integration
 
 ## Rebuild Scope
 The rebuild keeps the core 15-module path and integrates selected practical topics:
