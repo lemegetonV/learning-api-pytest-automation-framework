@@ -56,10 +56,10 @@ This is a clean reimplementation of the API testing learning project. The previo
 ```
 
 ## Current Module
-**Module:** Module 06 — Pytest Deep Dive
-**Branch:** module-06-pytest-deep-dive
-**Status:** In progress
-**Next:** Module 07 — Framework Architecture
+**Module:** Module 07 — Framework Architecture
+**Branch:** module-07-framework-architecture
+**Status:** Not started
+**Next:** Module 08 — Authentication Testing
 
 ## Rebuild Scope
 The rebuild keeps the core 15-module path and integrates selected practical topics:
