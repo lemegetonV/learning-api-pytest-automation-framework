@@ -1,0 +1,91 @@
+name: API Test Framework CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+    inputs:
+      test_scope:
+        description: "Pytest scope to run"
+        required: true
+        default: "full"
+        type: choice
+        options:
+          - full
+          - smoke
+          - performance
+          - security
+      parallel:
+        description: "Run pytest with xdist"
+        required: true
+        default: false
+        type: boolean
+
+env:
+  BASE_URL: "https://jsonplaceholder.typicode.com"
+  HTTPBIN_URL: "https://httpbin.org"
+  DUMMYJSON_URL: "https://dummyjson.com"
+  FAKESTORE_URL: "https://fakestoreapi.com"
+  TEST_TIMEOUT: "10"
+  TEST_ENV: "ci"
+  LOG_LEVEL: "INFO"
+
+jobs:
+  test:
+    name: Python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.12"]
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+          cache-dependency-path: "requirements.txt"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Check Python syntax
+        run: python -m compileall -q src tests
+
+      - name: Run pytest
+        env:
+          TEST_SCOPE: ${{ github.event.inputs.test_scope || 'full' }}
+          PARALLEL: ${{ github.event.inputs.parallel || 'false' }}
+        run: |
+          case "$TEST_SCOPE" in
+            full)
+              PYTEST_TARGET="tests/"
+              ;;
+            smoke)
+              PYTEST_TARGET="-m smoke"
+              ;;
+            performance)
+              PYTEST_TARGET="-m performance"
+              ;;
+            security)
+              PYTEST_TARGET="-m security"
+              ;;
+            *)
+              echo "Unknown TEST_SCOPE: $TEST_SCOPE"
+              exit 1
+              ;;
+          esac
+
+          if [ "$PARALLEL" = "true" ]; then
+            python -m pytest $PYTEST_TARGET -n auto
+          else
+            python -m pytest $PYTEST_TARGET
+          fi
