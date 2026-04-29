@@ -46,6 +46,19 @@ class APIClient:
         """Send a DELETE request."""
         return self._request("DELETE", endpoint, **kwargs)
 
+    def set_bearer_token(self, token: str) -> None:
+        """Apply a bearer token to all future requests in this client session."""
+        self.session.headers["Authorization"] = f"Bearer {token}"
+
+    def set_basic_auth(self, username: str, password: str) -> None:
+        """Apply HTTP Basic authentication to all future requests."""
+        self.session.auth = (username, password)
+
+    def clear_auth(self) -> None:
+        """Remove authentication state from the client session."""
+        self.session.headers.pop("Authorization", None)
+        self.session.auth = None
+
     def _request(self, method: str, endpoint: str, **kwargs: Any) -> requests.Response:
         """Apply framework defaults and send the HTTP request."""
         url = self._build_url(endpoint)
