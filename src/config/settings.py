@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import os
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -25,16 +25,24 @@ def _get_int(name: str, default: int) -> int:
 class Settings:
     """Runtime settings loaded from environment variables."""
 
-    base_url: str = os.getenv(
-        "BASE_URL",
-        "https://jsonplaceholder.typicode.com",
+    base_url: str = field(
+        default_factory=lambda: os.getenv(
+            "BASE_URL",
+            "https://jsonplaceholder.typicode.com",
+        )
     )
-    httpbin_url: str = os.getenv("HTTPBIN_URL", "https://httpbin.org")
-    dummyjson_url: str = os.getenv("DUMMYJSON_URL", "https://dummyjson.com")
-    fakestore_url: str = os.getenv("FAKESTORE_URL", "https://fakestoreapi.com")
-    timeout: int = _get_int("TEST_TIMEOUT", 10)
-    test_env: str = os.getenv("TEST_ENV", "local")
-    log_level: str = os.getenv("LOG_LEVEL", "INFO")
+    httpbin_url: str = field(
+        default_factory=lambda: os.getenv("HTTPBIN_URL", "https://httpbin.org")
+    )
+    dummyjson_url: str = field(
+        default_factory=lambda: os.getenv("DUMMYJSON_URL", "https://dummyjson.com")
+    )
+    fakestore_url: str = field(
+        default_factory=lambda: os.getenv("FAKESTORE_URL", "https://fakestoreapi.com")
+    )
+    timeout: int = field(default_factory=lambda: _get_int("TEST_TIMEOUT", 10))
+    test_env: str = field(default_factory=lambda: os.getenv("TEST_ENV", "local"))
+    log_level: str = field(default_factory=lambda: os.getenv("LOG_LEVEL", "INFO"))
 
 
 def get_settings() -> Settings:
