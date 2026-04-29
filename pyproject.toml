@@ -18,5 +18,6 @@ markers = [
     "schema: schema validation tests",
     "performance: response-time checks",
     "security: introductory security checks",
+    "reporting: report and log quality checks",
     "e2e: end-to-end workflow tests",
 ]

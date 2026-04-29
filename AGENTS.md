@@ -49,7 +49,8 @@ This is a clean reimplementation of the API testing learning project. The previo
 │   │   ├── test_10_schema/
 │   │   ├── test_11_advanced/
 │   │   ├── test_12_performance_security/
-│   │   └── test_13_cicd/
+│   │   ├── test_13_cicd/
+│   │   └── test_14_reporting/
 │   └── dummyjson/
 ├── test-data/
 ├── schemas/
@@ -60,7 +61,7 @@ This is a clean reimplementation of the API testing learning project. The previo
 ## Current Module
 **Module:** Module 14 — Reporting
 **Branch:** module-14-reporting
-**Status:** Not started
+**Status:** In progress
 **Next:** Module 15 — Capstone
 
 ## Rebuild Scope

@@ -65,6 +65,8 @@ jobs:
           TEST_SCOPE: ${{ github.event.inputs.test_scope || 'full' }}
           PARALLEL: ${{ github.event.inputs.parallel || 'false' }}
         run: |
+          REPORT_ARGS="--html=reports/pytest-report.html --self-contained-html --alluredir=reports/allure-results --junitxml=reports/junit.xml"
+
           case "$TEST_SCOPE" in
             full)
               PYTEST_TARGET="tests/"
@@ -85,7 +87,14 @@ jobs:
           esac
 
           if [ "$PARALLEL" = "true" ]; then
-            python -m pytest $PYTEST_TARGET -n auto
+            python -m pytest $PYTEST_TARGET -n auto $REPORT_ARGS
           else
-            python -m pytest $PYTEST_TARGET
+            python -m pytest $PYTEST_TARGET $REPORT_ARGS
           fi
+
+      - name: Upload test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports-python-${{ matrix.python-version }}
+          path: reports/
