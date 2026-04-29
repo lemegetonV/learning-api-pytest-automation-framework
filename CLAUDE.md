@@ -49,7 +49,8 @@ This is a clean reimplementation of the API testing learning project. The previo
 │   │   ├── test_10_schema/
 │   │   ├── test_11_advanced/
 │   │   ├── test_12_performance_security/
-│   │   └── test_13_cicd/
+│   │   ├── test_13_cicd/
+│   │   └── test_14_reporting/
 │   └── dummyjson/
 ├── test-data/
 ├── schemas/
