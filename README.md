@@ -8,7 +8,7 @@
 
 Production-style REST API test automation framework built with Python, pytest, and requests.
 
-This repository is also a learning project. It grows module by module from Python fundamentals and manual API concepts into a reusable API testing framework with configuration, fixtures, schema validation, data-driven testing, mocking, performance and security smoke checks, reporting, CI, and a DummyJSON capstone suite.
+This repository is a learning project. It grows module by module from Python fundamentals and manual API concepts into a reusable API testing framework with configuration, fixtures, schema validation, data-driven testing, mocking, performance and security smoke checks, reporting, CI, and a DummyJSON capstone suite.
 
 ## Modular Learning Structure
 
