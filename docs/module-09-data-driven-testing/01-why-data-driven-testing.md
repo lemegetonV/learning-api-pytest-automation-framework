@@ -68,9 +68,9 @@ Module 06 used inline lists because it was teaching `parametrize`. Module 09 int
 
 ## Code References
 
-- `tests/learning/test_06_pytest_features/test_parametrize.py`
-- `tests/learning/test_09_data_driven/test_static_file_data.py`
-- `test-data/module_09/post_filters.csv`
+- [`test_parametrize.py`](../../tests/learning/test_06_pytest_features/test_parametrize.py)
+- [`test_static_file_data.py`](../../tests/learning/test_09_data_driven/test_static_file_data.py)
+- [`post_filters.csv`](../../test-data/module_09/post_filters.csv)
 
 ## Key Takeaways
 

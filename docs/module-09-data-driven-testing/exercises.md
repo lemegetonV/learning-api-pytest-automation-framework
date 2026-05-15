@@ -4,8 +4,8 @@
 
 Open:
 
-- `test-data/module_09/post_payloads.json`
-- `test-data/module_09/post_filters.csv`
+- [`post_payloads.json`](../../test-data/module_09/post_payloads.json)
+- [`post_filters.csv`](../../test-data/module_09/post_filters.csv)
 
 Answer:
 
@@ -15,7 +15,7 @@ Answer:
 
 ## Exercise 2: Add A JSON Payload Case
 
-Add one new object to `test-data/module_09/post_payloads.json`.
+Add one new object to [`post_payloads.json`](../../test-data/module_09/post_payloads.json).
 
 Expected fields:
 
@@ -37,7 +37,7 @@ Expected outcome:
 
 ## Exercise 3: Add A CSV Filter Row
 
-Add this row to `test-data/module_09/post_filters.csv`:
+Add this row to [`post_filters.csv`](../../test-data/module_09/post_filters.csv):
 
 ```csv
 second-user-posts,2,10
@@ -52,7 +52,7 @@ Expected outcome:
 
 ## Exercise 4: Compare Seeds
 
-Run a Python shell:
+Run a Python shell for a quick learning probe:
 
 ```python
 from tests.learning.test_09_data_driven.test_generated_data import build_fake_post_payload
@@ -66,6 +66,8 @@ Expected outcome:
 
 - The first two payloads match.
 - The third payload differs.
+
+Note: this direct import from a test module is only for scratch exploration in this exercise. Production tests should not depend on helpers hidden inside another test file; if a generator becomes reusable framework behavior, move it into a dedicated helper under `src/`.
 
 ## Exercise 5: Decide The Data Source
 
@@ -82,7 +84,7 @@ Explain your choices.
 
 In your own notes, answer:
 
-1. What belongs in `test-data/`?
-2. What belongs in `src/utils/data_loader.py`?
+1. What belongs in [`test-data/`](../../test-data/)?
+2. What belongs in [`src/utils/data_loader.py`](../../src/utils/data_loader.py)?
 3. Why should generated data be seeded in CI?
 4. Why is Module 10 the right place for schema validation instead of Module 09?

@@ -1,6 +1,6 @@
 # Loading JSON And CSV Data
 
-Module 09 adds a small loader in `src/utils/data_loader.py` so tests can read files from the project root without hard-coding absolute paths.
+Module 09 adds a small loader in [`src/utils/data_loader.py`](../../src/utils/data_loader.py) so tests can read files from the project root without hard-coding absolute paths.
 
 ## Loader Functions
 
@@ -32,7 +32,7 @@ Using `project_path("test-data/module_09/post_payloads.json")` keeps data lookup
 
 ## JSON Data
 
-`test-data/module_09/post_payloads.json` contains POST request cases:
+[`post_payloads.json`](../../test-data/module_09/post_payloads.json) contains POST request cases:
 
 ```json
 {
@@ -57,7 +57,7 @@ JSON is good for API payloads because it keeps:
 
 ## CSV Data
 
-`test-data/module_09/post_filters.csv` contains query examples:
+[`post_filters.csv`](../../test-data/module_09/post_filters.csv) contains query examples:
 
 ```csv
 case_id,user_id,expected_count
@@ -85,10 +85,10 @@ expected_count = int(row["expected_count"])
 
 ## Code References
 
-- `src/utils/data_loader.py`
-- `src/utils/__init__.py`
-- `tests/learning/test_09_data_driven/test_data_loader.py`
-- `tests/learning/test_09_data_driven/test_static_file_data.py`
+- [`src/utils/data_loader.py`](../../src/utils/data_loader.py)
+- [`src/utils/__init__.py`](../../src/utils/__init__.py)
+- [`test_data_loader.py`](../../tests/learning/test_09_data_driven/test_data_loader.py)
+- [`test_static_file_data.py`](../../tests/learning/test_09_data_driven/test_static_file_data.py)
 
 ## Key Takeaways
 

@@ -4,7 +4,7 @@ Module 06 introduced inline `@pytest.mark.parametrize`. Module 09 extends that i
 
 ## Static JSON Payload Cases
 
-`tests/learning/test_09_data_driven/test_static_file_data.py` loads JSON at module import time:
+[`test_static_file_data.py`](../../tests/learning/test_09_data_driven/test_static_file_data.py) loads JSON at module import time:
 
 ```python
 POST_PAYLOAD_CASES = load_json_data("test-data/module_09/post_payloads.json")
@@ -79,9 +79,9 @@ That creates one test with many hidden examples. `pytest.mark.parametrize` gives
 
 ## Code References
 
-- `tests/learning/test_09_data_driven/test_static_file_data.py`
-- `test-data/module_09/post_payloads.json`
-- `test-data/module_09/post_filters.csv`
+- [`test_static_file_data.py`](../../tests/learning/test_09_data_driven/test_static_file_data.py)
+- [`post_payloads.json`](../../test-data/module_09/post_payloads.json)
+- [`post_filters.csv`](../../test-data/module_09/post_filters.csv)
 
 ## Key Takeaways
 

@@ -8,10 +8,10 @@ This module keeps JSONPlaceholder as the target API and introduces `faker` for g
 
 | Area | Files | Purpose |
 | --- | --- | --- |
-| Data dependency | `requirements.txt` | Activates `faker` for generated test data |
-| Data loader | `src/utils/data_loader.py` | Loads project-relative JSON and CSV data |
-| Static data files | `test-data/module_09/post_payloads.json`, `test-data/module_09/post_filters.csv` | Keeps payloads and query combinations outside test logic |
-| Data-driven tests | `tests/learning/test_09_data_driven/` | Demonstrates JSON, CSV, and generated data patterns |
+| Data dependency | [`requirements.txt`](../../requirements.txt) | Activates `faker` for generated test data |
+| Data loader | [`src/utils/data_loader.py`](../../src/utils/data_loader.py) | Loads project-relative JSON and CSV data |
+| Static data files | [`post_payloads.json`](../../test-data/module_09/post_payloads.json), [`post_filters.csv`](../../test-data/module_09/post_filters.csv) | Keeps payloads and query combinations outside test logic |
+| Data-driven tests | [`tests/learning/test_09_data_driven/`](../../tests/learning/test_09_data_driven/) | Demonstrates JSON, CSV, and generated data patterns |
 | Learning docs | `docs/module-09-data-driven-testing/` | Explains data strategy and links concepts to code |
 
 ## Learning Flow
@@ -32,20 +32,21 @@ flowchart TD
 
 | Concept | Why it matters | Code reference |
 | --- | --- | --- |
-| External test data | Keeps large payloads out of test functions | `test-data/module_09/post_payloads.json` |
-| CSV tables | Works well for tabular combinations | `test-data/module_09/post_filters.csv` |
-| JSON data | Preserves nested objects and numeric types | `src/utils/data_loader.py` |
-| Parametrize from files | One test function can run many cases from data | `tests/learning/test_09_data_driven/test_static_file_data.py` |
-| Faker | Generates realistic values without hand-writing every payload | `tests/learning/test_09_data_driven/test_generated_data.py` |
+| External test data | Keeps large payloads out of test functions | [`post_payloads.json`](../../test-data/module_09/post_payloads.json) |
+| CSV tables | Works well for tabular combinations | [`post_filters.csv`](../../test-data/module_09/post_filters.csv) |
+| JSON data | Preserves nested objects and numeric types | [`src/utils/data_loader.py`](../../src/utils/data_loader.py) |
+| Parametrize from files | One test function can run many cases from data | [`test_static_file_data.py`](../../tests/learning/test_09_data_driven/test_static_file_data.py) |
+| Faker | Generates realistic values without hand-writing every payload | [`test_generated_data.py`](../../tests/learning/test_09_data_driven/test_generated_data.py) |
 | Deterministic generation | Seeds make failures reproducible | `build_fake_post_payload()` |
+| Checkpoint review | Data flow, loader responsibilities, failure model, and interview review | [`06-checkpoint-deep-dive.md`](06-checkpoint-deep-dive.md) |
 
 ## Data Sources In This Module
 
 | Source | Best for | Example |
 | --- | --- | --- |
 | Inline list | Small concept examples | Module 06 parameter lists |
-| JSON file | API request bodies, nested structures, typed data | `post_payloads.json` |
-| CSV file | Table-shaped filters and combinations | `post_filters.csv` |
+| JSON file | API request bodies, nested structures, typed data | [`post_payloads.json`](../../test-data/module_09/post_payloads.json) |
+| CSV file | Table-shaped filters and combinations | [`post_filters.csv`](../../test-data/module_09/post_filters.csv) |
 | Faker | Realistic generated names, text, emails, addresses | generated post payloads |
 
 ## What Is Intentionally Deferred
@@ -58,9 +59,9 @@ Module 09 also does not build a database-backed data factory. That belongs in la
 
 Module 09 is complete when:
 
-- `faker` is active in `requirements.txt`.
-- Static data exists under `test-data/module_09/`.
-- JSON and CSV loading helpers exist in `src/utils/data_loader.py`.
+- `faker` is active in [`requirements.txt`](../../requirements.txt).
+- Static data exists under [`test-data/module_09/`](../../test-data/module_09/).
+- JSON and CSV loading helpers exist in [`src/utils/data_loader.py`](../../src/utils/data_loader.py).
 - Tests load JSON and CSV data from files.
 - Faker examples use seeds so generated data is reproducible.
 - Docs explain deterministic vs generated data strategy.

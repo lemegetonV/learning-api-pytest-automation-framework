@@ -2,7 +2,7 @@
 
 Static files are not the only data source. Sometimes tests need realistic values without hand-writing every title, paragraph, email, or address.
 
-Module 09 activates `faker` in `requirements.txt`.
+Module 09 activates `faker` in [`requirements.txt`](../../requirements.txt).
 
 ## Why Generate Data
 
@@ -17,7 +17,7 @@ Generated data is risky when it is random and cannot be reproduced. That is why 
 
 ## Seeded Generation
 
-`tests/learning/test_09_data_driven/test_generated_data.py` uses:
+[`test_generated_data.py`](../../tests/learning/test_09_data_driven/test_generated_data.py) uses:
 
 ```python
 def build_fake_post_payload(seed: int, user_id: int = 1) -> dict[str, object]:
@@ -66,8 +66,8 @@ Use fixed data when the exact value matters. Use seeded generated data when real
 
 ## Code References
 
-- `requirements.txt`
-- `tests/learning/test_09_data_driven/test_generated_data.py`
+- [`requirements.txt`](../../requirements.txt)
+- [`test_generated_data.py`](../../tests/learning/test_09_data_driven/test_generated_data.py)
 
 ## Key Takeaways
 

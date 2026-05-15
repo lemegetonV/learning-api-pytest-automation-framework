@@ -30,8 +30,8 @@ JSONPlaceholder does not truly persist created data, so Module 09 does not need 
 
 | Layer | Owns |
 | --- | --- |
-| `test-data/` | Static examples and reusable payload rows |
-| `src/utils/data_loader.py` | File-loading mechanics |
+| [`test-data/`](../../test-data/) | Static examples and reusable payload rows |
+| [`src/utils/data_loader.py`](../../src/utils/data_loader.py) | File-loading mechanics |
 | test files | Scenario logic, type conversion, API calls, assertions |
 | future factories | Generated objects with domain rules |
 
@@ -53,9 +53,9 @@ Module 09 is the foundation: load data, generate data, keep it reproducible, and
 
 ## Code References
 
-- `test-data/module_09/`
-- `src/utils/data_loader.py`
-- `tests/learning/test_09_data_driven/`
+- [`test-data/module_09/`](../../test-data/module_09/)
+- [`src/utils/data_loader.py`](../../src/utils/data_loader.py)
+- [`tests/learning/test_09_data_driven/`](../../tests/learning/test_09_data_driven/)
 
 ## Key Takeaways
 
