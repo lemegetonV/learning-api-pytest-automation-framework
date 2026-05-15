@@ -89,10 +89,10 @@ Only `api_client` and `config` get real code in this module. `models` and `utils
 
 ## Code References
 
-- `src/config/settings.py`
-- `src/api_client/client.py`
-- `tests/conftest.py`
-- `tests/learning/test_07_framework/test_api_client.py`
+- [`src/config/settings.py`](../../src/config/settings.py)
+- [`src/api_client/client.py`](../../src/api_client/client.py)
+- [`tests/conftest.py`](../../tests/conftest.py)
+- [`test_api_client.py`](../../tests/learning/test_07_framework/test_api_client.py)
 
 ## Key Takeaways
 
@@ -101,4 +101,3 @@ Only `api_client` and `config` get real code in this module. `models` and `utils
 - The client layer wraps HTTP details.
 - The config layer owns runtime values.
 - Good architecture is incremental; do not refactor everything at once without a learning or maintenance reason.
-

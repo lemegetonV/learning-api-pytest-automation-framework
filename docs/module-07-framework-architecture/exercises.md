@@ -49,7 +49,7 @@ Expected outcome:
 
 ## Exercise 4: Add A Client Test
 
-Add a test under `tests/learning/test_07_framework/test_api_client.py` that calls:
+Add a test under [`test_api_client.py`](../../tests/learning/test_07_framework/test_api_client.py) that calls:
 
 ```text
 GET /users/1
@@ -63,7 +63,7 @@ Expected assertions:
 
 ## Exercise 5: Compare Raw Requests And Client Calls
 
-Find one test in `tests/learning/test_04_basic_get/test_posts.py`.
+Find one test in [`test_posts.py`](../../tests/learning/test_04_basic_get/test_posts.py).
 
 Write the equivalent using `api_client`.
 
@@ -80,4 +80,3 @@ In your own notes, answer:
 3. What belongs in `Settings`?
 4. Why should secrets not be committed?
 5. Why did we not rewrite all old tests in Module 07?
-

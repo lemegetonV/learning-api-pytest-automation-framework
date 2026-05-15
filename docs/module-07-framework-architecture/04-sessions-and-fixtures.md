@@ -59,7 +59,7 @@ The session fixture is still useful for demonstrating pytest yield fixtures. The
 
 ## Fixture Wiring
 
-`tests/conftest.py` now exposes:
+[`tests/conftest.py`](../../tests/conftest.py) now exposes:
 
 | Fixture | Scope | Purpose |
 | --- | --- | --- |
@@ -81,10 +81,10 @@ This ensures network resources are released after the test session.
 
 ## Code References
 
-- `tests/conftest.py`
-- `src/api_client/client.py`
-- `tests/learning/test_06_pytest_features/test_classes.py`
-- `tests/learning/test_07_framework/test_api_client.py`
+- [`tests/conftest.py`](../../tests/conftest.py)
+- [`src/api_client/client.py`](../../src/api_client/client.py)
+- [`test_classes.py`](../../tests/learning/test_06_pytest_features/test_classes.py)
+- [`test_api_client.py`](../../tests/learning/test_07_framework/test_api_client.py)
 
 ## Key Takeaways
 
@@ -92,4 +92,3 @@ This ensures network resources are released after the test session.
 - APIClient wraps a session so tests do not build URLs manually.
 - Yield fixtures guarantee cleanup.
 - Existing raw fixtures remain for compatibility and learning references.
-

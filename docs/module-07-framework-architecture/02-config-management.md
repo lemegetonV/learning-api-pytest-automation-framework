@@ -55,7 +55,7 @@ flowchart LR
 
 ## Settings Implementation
 
-Module 07 adds `src/config/settings.py`.
+Module 07 adds [`src/config/settings.py`](../../src/config/settings.py).
 
 Important pieces:
 
@@ -87,7 +87,7 @@ print(settings.base_url)
 print(settings.timeout)
 ```
 
-The tests use the same function through `tests/conftest.py`:
+The tests use the same function through [`tests/conftest.py`](../../tests/conftest.py):
 
 ```python
 @pytest.fixture(scope="session")
@@ -109,12 +109,12 @@ In real projects, defaults should be safe. Never default to production credentia
 
 ## Code References
 
-- `src/config/settings.py`
-- `src/config/__init__.py`
-- `.env.example`
-- `requirements.txt`
-- `tests/conftest.py`
-- `tests/learning/test_07_framework/test_config.py`
+- [`src/config/settings.py`](../../src/config/settings.py)
+- [`src/config/__init__.py`](../../src/config/__init__.py)
+- [`.env.example`](../../.env.example)
+- [`requirements.txt`](../../requirements.txt)
+- [`tests/conftest.py`](../../tests/conftest.py)
+- [`test_config.py`](../../tests/learning/test_07_framework/test_config.py)
 
 ## Key Takeaways
 
@@ -123,4 +123,3 @@ In real projects, defaults should be safe. Never default to production credentia
 - `.env` stays local and gitignored.
 - `python-dotenv` loads local config for development.
 - `get_settings()` gives the framework one config entry point.
-

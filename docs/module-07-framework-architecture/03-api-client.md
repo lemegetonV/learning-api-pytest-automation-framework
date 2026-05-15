@@ -24,7 +24,7 @@ f"{jsonplaceholder_base_url}/posts/1"
 
 ## Client Shape
 
-Module 07 adds `src/api_client/client.py`.
+Module 07 adds [`src/api_client/client.py`](../../src/api_client/client.py).
 
 ```python
 class APIClient:
@@ -119,10 +119,10 @@ def api_client():
 
 ## Code References
 
-- `src/api_client/client.py`
-- `src/api_client/__init__.py`
-- `tests/conftest.py`
-- `tests/learning/test_07_framework/test_api_client.py`
+- [`src/api_client/client.py`](../../src/api_client/client.py)
+- [`src/api_client/__init__.py`](../../src/api_client/__init__.py)
+- [`tests/conftest.py`](../../tests/conftest.py)
+- [`test_api_client.py`](../../tests/learning/test_07_framework/test_api_client.py)
 
 ## Key Takeaways
 
@@ -131,4 +131,3 @@ def api_client():
 - `_request` is the single place for shared request behavior.
 - `**kwargs` keeps the client flexible.
 - The client owns session cleanup.
-
