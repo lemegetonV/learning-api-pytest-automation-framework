@@ -64,9 +64,9 @@ Module 10 uses strict schemas because JSONPlaceholder responses are stable and p
 
 ## Code References
 
-- `tests/learning/test_10_schema/test_contract_boundaries.py`
-- `tests/learning/test_10_schema/test_schema_helpers.py`
-- `src/utils/schema_validator.py`
+- [`test_contract_boundaries.py`](../../tests/learning/test_10_schema/test_contract_boundaries.py)
+- [`test_schema_helpers.py`](../../tests/learning/test_10_schema/test_schema_helpers.py)
+- [`src/utils/schema_validator.py`](../../src/utils/schema_validator.py)
 
 ## Key Takeaways
 

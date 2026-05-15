@@ -4,7 +4,7 @@ Module 10 validates live JSONPlaceholder responses with schemas.
 
 ## Single Object Validation
 
-`tests/learning/test_10_schema/test_response_schemas.py` validates a single post:
+[`test_response_schemas.py`](../../tests/learning/test_10_schema/test_response_schemas.py) validates a single post:
 
 ```python
 def test_single_post_matches_schema(api_client, post_schema):
@@ -58,7 +58,7 @@ user
 └── company
 ```
 
-`schemas/jsonplaceholder/user.schema.json` validates those nested structures with nested `properties`, `required`, and `additionalProperties` rules.
+[`user.schema.json`](../../schemas/jsonplaceholder/user.schema.json) validates those nested structures with nested `properties`, `required`, and `additionalProperties` rules.
 
 ## Response Validation Pipeline
 
@@ -73,11 +73,11 @@ flowchart TD
 
 ## Code References
 
-- `tests/learning/test_10_schema/test_response_schemas.py`
-- `schemas/jsonplaceholder/post.schema.json`
-- `schemas/jsonplaceholder/post_collection.schema.json`
-- `schemas/jsonplaceholder/comment.schema.json`
-- `schemas/jsonplaceholder/user.schema.json`
+- [`test_response_schemas.py`](../../tests/learning/test_10_schema/test_response_schemas.py)
+- [`post.schema.json`](../../schemas/jsonplaceholder/post.schema.json)
+- [`post_collection.schema.json`](../../schemas/jsonplaceholder/post_collection.schema.json)
+- [`comment.schema.json`](../../schemas/jsonplaceholder/comment.schema.json)
+- [`user.schema.json`](../../schemas/jsonplaceholder/user.schema.json)
 
 ## Key Takeaways
 

@@ -6,7 +6,7 @@ JSON Schema is a vocabulary for describing valid JSON. In API testing, it helps 
 
 ## A Small Schema
 
-`schemas/jsonplaceholder/post.schema.json` describes a JSONPlaceholder post:
+[`post.schema.json`](../../schemas/jsonplaceholder/post.schema.json) describes a JSONPlaceholder post:
 
 ```json
 {
@@ -63,9 +63,9 @@ sequenceDiagram
 
 ## Code References
 
-- `schemas/jsonplaceholder/post.schema.json`
-- `tests/learning/test_10_schema/test_schema_helpers.py`
-- `tests/learning/test_10_schema/test_response_schemas.py`
+- [`post.schema.json`](../../schemas/jsonplaceholder/post.schema.json)
+- [`test_schema_helpers.py`](../../tests/learning/test_10_schema/test_schema_helpers.py)
+- [`test_response_schemas.py`](../../tests/learning/test_10_schema/test_response_schemas.py)
 
 ## Key Takeaways
 

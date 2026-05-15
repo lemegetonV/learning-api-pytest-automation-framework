@@ -6,10 +6,10 @@ Module 10 teaches how to validate API response structure with JSON Schema. Earli
 
 | Area | Files | Purpose |
 | --- | --- | --- |
-| Dependency | `requirements.txt` | Activates `jsonschema` |
-| Schema helpers | `src/utils/schema_validator.py` | Loads schemas, validates JSON, and collects validation errors |
-| JSON Schemas | `schemas/jsonplaceholder/` | Defines response contracts for posts, comments, users, and post collections |
-| Schema tests | `tests/learning/test_10_schema/` | Validates live JSONPlaceholder responses and intentional failure examples |
+| Dependency | [`requirements.txt`](../../requirements.txt) | Activates `jsonschema` |
+| Schema helpers | [`src/utils/schema_validator.py`](../../src/utils/schema_validator.py) | Loads schemas, validates JSON, and collects validation errors |
+| JSON Schemas | [`schemas/jsonplaceholder/`](../../schemas/jsonplaceholder/) | Defines response contracts for posts, comments, users, and post collections |
+| Schema tests | [`tests/learning/test_10_schema/`](../../tests/learning/test_10_schema/) | Validates live JSONPlaceholder responses and intentional failure examples |
 | Learning docs | `docs/module-10-schema-validation/` | Explains schema concepts and maps them to project files |
 
 ## Learning Flow
@@ -29,12 +29,13 @@ flowchart TD
 
 | Concept | What you learn | Code reference |
 | --- | --- | --- |
-| JSON Schema basics | `type`, `required`, `properties`, `additionalProperties` | `schemas/jsonplaceholder/post.schema.json` |
-| Nested schemas | Object schemas inside object schemas | `schemas/jsonplaceholder/user.schema.json` |
-| Array schemas | Validate collection shape and item shape together | `schemas/jsonplaceholder/post_collection.schema.json` |
-| Helper validation | Keep validator setup out of tests | `src/utils/schema_validator.py` |
-| Format checking | `format` needs framework support to be enforced | `tests/learning/test_10_schema/test_contract_boundaries.py` |
+| JSON Schema basics | `type`, `required`, `properties`, `additionalProperties` | [`post.schema.json`](../../schemas/jsonplaceholder/post.schema.json) |
+| Nested schemas | Object schemas inside object schemas | [`user.schema.json`](../../schemas/jsonplaceholder/user.schema.json) |
+| Array schemas | Validate collection shape and item shape together | [`post_collection.schema.json`](../../schemas/jsonplaceholder/post_collection.schema.json) |
+| Helper validation | Keep validator setup out of tests | [`src/utils/schema_validator.py`](../../src/utils/schema_validator.py) |
+| Format checking | `format` needs framework support to be enforced | [`test_contract_boundaries.py`](../../tests/learning/test_10_schema/test_contract_boundaries.py) |
 | Boundaries | Schema checks shape; assertions still check behavior | `test_schema_does_not_replace_business_assertions` |
+| Checkpoint review | Schema execution flow, helper boundaries, failure model, and interview review | [`06-checkpoint-deep-dive.md`](06-checkpoint-deep-dive.md) |
 
 ## What Is Intentionally Deferred
 
@@ -46,9 +47,9 @@ Module 10 also does not generate schemas automatically from OpenAPI. The learnin
 
 Module 10 is complete when:
 
-- `jsonschema` is active in `requirements.txt`.
-- reusable schema helpers exist in `src/utils/schema_validator.py`.
-- JSONPlaceholder schemas exist under `schemas/jsonplaceholder/`.
+- `jsonschema` is active in [`requirements.txt`](../../requirements.txt).
+- reusable schema helpers exist in [`src/utils/schema_validator.py`](../../src/utils/schema_validator.py).
+- JSONPlaceholder schemas exist under [`schemas/jsonplaceholder/`](../../schemas/jsonplaceholder/).
 - tests validate posts, comments, users, and collections.
 - tests show missing fields, unexpected fields, format failures, and business assertion boundaries.
 - docs link schema concepts to real code and schema files.

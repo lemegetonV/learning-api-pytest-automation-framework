@@ -2,7 +2,7 @@
 
 ## Exercise 1: Read A Schema
 
-Open `schemas/jsonplaceholder/post.schema.json`.
+Open [`post.schema.json`](../../schemas/jsonplaceholder/post.schema.json).
 
 Answer:
 
@@ -12,7 +12,7 @@ Answer:
 
 ## Exercise 2: Break A Payload Intentionally
 
-Open `tests/learning/test_10_schema/test_schema_helpers.py`.
+Open [`test_schema_helpers.py`](../../tests/learning/test_10_schema/test_schema_helpers.py).
 
 Change the valid payload in `test_validate_json_accepts_valid_payload` so `id` is `"1"` instead of `1`.
 
@@ -50,7 +50,7 @@ Hint: `completed` is a boolean.
 
 ## Exercise 4: Add A Todo Schema Test
 
-Create a new test in `tests/learning/test_10_schema/test_response_schemas.py`.
+Create a new test in [`test_response_schemas.py`](../../tests/learning/test_10_schema/test_response_schemas.py).
 
 Steps:
 
@@ -62,7 +62,7 @@ Steps:
 
 ## Exercise 5: Explain Format Checking
 
-Read `src/utils/schema_validator.py`.
+Read [`src/utils/schema_validator.py`](../../src/utils/schema_validator.py).
 
 Answer:
 

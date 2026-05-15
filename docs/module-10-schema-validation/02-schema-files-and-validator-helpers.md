@@ -13,7 +13,7 @@ schemas/
     └── user.schema.json
 ```
 
-Tests import helpers from `src/utils/schema_validator.py`:
+Tests import helpers from [`src/utils/schema_validator.py`](../../src/utils/schema_validator.py):
 
 ```python
 from src.utils import collect_validation_errors, load_schema, validate_json
@@ -60,7 +60,7 @@ JSON Schema `format` is easy to misunderstand. A schema can say:
 
 But the Python `jsonschema` library only enforces format rules when the validator is configured with a `FormatChecker`.
 
-Module 10 handles that in `src/utils/schema_validator.py`:
+Module 10 handles that in [`src/utils/schema_validator.py`](../../src/utils/schema_validator.py):
 
 ```python
 Draft202012Validator(schema, format_checker=FormatChecker())
@@ -70,10 +70,10 @@ That is why `test_schema_format_checks_need_framework_support` catches invalid e
 
 ## Code References
 
-- `src/utils/schema_validator.py`
-- `src/utils/__init__.py`
-- `tests/learning/test_10_schema/test_schema_helpers.py`
-- `tests/learning/test_10_schema/test_contract_boundaries.py`
+- [`src/utils/schema_validator.py`](../../src/utils/schema_validator.py)
+- [`src/utils/__init__.py`](../../src/utils/__init__.py)
+- [`test_schema_helpers.py`](../../tests/learning/test_10_schema/test_schema_helpers.py)
+- [`test_contract_boundaries.py`](../../tests/learning/test_10_schema/test_contract_boundaries.py)
 
 ## Key Takeaways
 

@@ -59,8 +59,8 @@ Do not validate a response against the wrong schema just because it is convenien
 
 ## Code References
 
-- `tests/learning/test_10_schema/test_contract_boundaries.py`
-- `tests/learning/test_10_schema/test_response_schemas.py`
+- [`test_contract_boundaries.py`](../../tests/learning/test_10_schema/test_contract_boundaries.py)
+- [`test_response_schemas.py`](../../tests/learning/test_10_schema/test_response_schemas.py)
 
 ## Key Takeaways
 
