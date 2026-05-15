@@ -37,7 +37,7 @@ That gives us a deterministic setup check:
 - Still proves the package is installed and usable.
 - Prepares the learner for Module 04 live `GET` tests.
 
-See `tests/learning/test_03_environment_setup/test_requests_preparation.py`.
+See [`test_requests_preparation.py`](../../tests/learning/test_03_environment_setup/test_requests_preparation.py).
 
 ## Importing Requests
 
@@ -113,7 +113,7 @@ response = requests.get(
 
 Without a timeout, a test can hang for a long time if the network or API is unresponsive. A hanging test is harder to diagnose than a failed test.
 
-Module 03 introduces `default_timeout_seconds` in `tests/conftest.py` so later tests can reuse a consistent timeout value.
+Module 03 introduces `default_timeout_seconds` in [`tests/conftest.py`](../../tests/conftest.py) so later tests can reuse a consistent timeout value.
 
 ## Response Objects Preview
 
@@ -133,10 +133,10 @@ These names should already connect to the HTTP concepts from Module 02.
 
 ## Code References
 
-- `requirements.txt` activates `requests==2.32.3`.
-- `tests/learning/test_03_environment_setup/test_python_environment.py` verifies `requests` can be imported.
-- `tests/learning/test_03_environment_setup/test_requests_preparation.py` demonstrates prepared `GET` and `POST` requests.
-- `tests/conftest.py` contains a timeout fixture for future live requests.
+- [`requirements.txt`](../../requirements.txt) activates `requests==2.32.3`.
+- [`test_python_environment.py`](../../tests/learning/test_03_environment_setup/test_python_environment.py) verifies `requests` can be imported.
+- [`test_requests_preparation.py`](../../tests/learning/test_03_environment_setup/test_requests_preparation.py) demonstrates prepared `GET` and `POST` requests.
+- [`tests/conftest.py`](../../tests/conftest.py) contains a timeout fixture for future live requests.
 
 ## Key Takeaways
 
@@ -146,4 +146,3 @@ These names should already connect to the HTTP concepts from Module 02.
 - Use `json=` for JSON request bodies.
 - Use `timeout=` when sending real requests.
 - Module 04 will turn this setup into live API tests.
-

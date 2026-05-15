@@ -45,20 +45,20 @@ api-testing-python-pytest-framework/
 └── reports/
 ```
 
-## `tests/learning/` vs `tests/dummyjson/`
+## [`tests/learning/`](../../tests/learning/) vs [`tests/dummyjson/`](../../tests/dummyjson/)
 
 The project intentionally has two test lanes.
 
 | Lane | Purpose | When used |
 | --- | --- | --- |
-| `tests/learning/` | Small tutorial tests tied to modules | Modules 03-14 |
-| `tests/dummyjson/` | Production-style capstone suite | Module 15 |
+| [`tests/learning/`](../../tests/learning/) | Small tutorial tests tied to modules | Modules 03-14 |
+| [`tests/dummyjson/`](../../tests/dummyjson/) | Production-style capstone suite | Module 15 |
 
 This avoids a problem from the previous implementation: early learning tests were reorganized later. In this rebuild, the learning lane exists from the start.
 
-## `pyproject.toml`
+## [`pyproject.toml`](../../pyproject.toml)
 
-`pyproject.toml` stores project metadata and pytest configuration.
+[`pyproject.toml`](../../pyproject.toml) stores project metadata and pytest configuration.
 
 Current pytest settings:
 
@@ -85,7 +85,7 @@ What this means:
 
 | Setting | Meaning |
 | --- | --- |
-| `testpaths` | Only collect tests under `tests/` by default |
+| `testpaths` | Only collect tests under [`tests/`](../../tests/) by default |
 | `python_files` | Test files must be named like `test_something.py` |
 | `python_classes` | Test classes must start with `Test` |
 | `python_functions` | Test functions must start with `test_` |
@@ -111,13 +111,13 @@ allure-results/
 
 The principle is simple: commit source, docs, examples, and configuration. Do not commit generated files, local secrets, reports, or personal editor state.
 
-## `.env.example`
+## [`.env.example`](../../.env.example)
 
-`.env.example` is a template. It documents environment variables the project will eventually use. It is safe to commit because it contains example values, not secrets.
+[`.env.example`](../../.env.example) is a template. It documents environment variables the project will eventually use. It is safe to commit because it contains example values, not secrets.
 
 Actual `.env` files are ignored. Module 07 introduces real configuration loading with `python-dotenv`.
 
-## `tests/conftest.py`
+## [`tests/conftest.py`](../../tests/conftest.py)
 
 `conftest.py` is pytest's shared fixture file. Tests can ask for a fixture by function parameter name, and pytest supplies the value.
 
@@ -135,28 +135,27 @@ flowchart LR
     T --> R["test receives shared value"]
 ```
 
-## `src/`
+## [`src/`](../../src/)
 
-`src/` is where reusable framework code will live. It is mostly empty in Module 03 because we are not building abstractions before we need them.
+[`src/`](../../src/) is where reusable framework code will live. It is mostly empty in Module 03 because we are not building abstractions before we need them.
 
 Later modules will add:
 
-- `src/utils/` for small helpers.
-- `src/config/` for environment-aware configuration.
-- `src/api_client/` for a reusable HTTP client.
-- `src/models/` for schema or response model helpers.
+- [`src/utils/`](../../src/utils/) for small helpers.
+- [`src/config/`](../../src/config/) for environment-aware configuration.
+- [`src/api_client/`](../../src/api_client/) for a reusable HTTP client.
+- [`src/models/`](../../src/models/) for schema or response model helpers.
 
 ## Code References
 
-- `pyproject.toml` contains the test discovery rules described above.
+- [`pyproject.toml`](../../pyproject.toml) contains the test discovery rules described above.
 - `.gitignore` contains the generated-file rules described above.
-- `tests/conftest.py` contains the first shared fixtures.
-- `tests/learning/test_03_environment_setup/` contains this module's runnable examples.
+- [`tests/conftest.py`](../../tests/conftest.py) contains the first shared fixtures.
+- [`tests/learning/test_03_environment_setup/`](../../tests/learning/test_03_environment_setup/) contains this module's runnable examples.
 
 ## Key Takeaways
 
 - The rebuild separates learning tests from the capstone suite from the start.
-- `pyproject.toml` controls how pytest discovers tests.
-- `tests/conftest.py` is the pytest-native place for shared setup.
-- `src/` stays small until a real need for reusable framework code appears.
-
+- [`pyproject.toml`](../../pyproject.toml) controls how pytest discovers tests.
+- [`tests/conftest.py`](../../tests/conftest.py) is the pytest-native place for shared setup.
+- [`src/`](../../src/) stays small until a real need for reusable framework code appears.

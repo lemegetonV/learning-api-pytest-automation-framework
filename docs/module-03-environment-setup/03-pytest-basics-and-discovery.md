@@ -21,7 +21,7 @@ There is no class requirement and no assertion library requirement. A function n
 
 ## Discovery Rules
 
-Pytest uses naming conventions. Our conventions are registered in `pyproject.toml`.
+Pytest uses naming conventions. Our conventions are registered in [`pyproject.toml`](../../pyproject.toml).
 
 ```mermaid
 flowchart TD
@@ -39,7 +39,7 @@ Examples:
 
 | File or function | Collected? | Why |
 | --- | --- | --- |
-| `tests/learning/test_03_environment_setup/test_python_environment.py` | Yes | File starts with `test_` |
+| [`test_python_environment.py`](../../tests/learning/test_03_environment_setup/test_python_environment.py) | Yes | File starts with `test_` |
 | `def test_python_version_is_supported()` | Yes | Function starts with `test_` |
 | `def check_python_version()` | No | Function does not start with `test_` |
 | `environment_check.py` | No | File does not start with `test_` |
@@ -106,7 +106,7 @@ def test_base_url_fixture(jsonplaceholder_base_url):
     assert jsonplaceholder_base_url.startswith("https://")
 ```
 
-Pytest finds the fixture in `tests/conftest.py`, calls it, and passes the returned value to the test.
+Pytest finds the fixture in [`tests/conftest.py`](../../tests/conftest.py), calls it, and passes the returned value to the test.
 
 ```mermaid
 sequenceDiagram
@@ -147,7 +147,7 @@ Run everything except smoke tests:
 python -m pytest -m "not smoke"
 ```
 
-Markers are registered in `pyproject.toml` so pytest does not warn about unknown labels.
+Markers are registered in [`pyproject.toml`](../../pyproject.toml) so pytest does not warn about unknown labels.
 
 ## Reading Output
 
@@ -168,10 +168,10 @@ The file path, test name, and assertion detail tell you where to look first.
 
 ## Code References
 
-- `tests/learning/test_03_environment_setup/test_python_environment.py` shows environment assertions.
-- `tests/learning/test_03_environment_setup/test_pytest_behaviour.py` shows basic pytest behavior.
-- `tests/conftest.py` contains fixtures used by the tests.
-- `pyproject.toml` defines discovery rules and markers.
+- [`test_python_environment.py`](../../tests/learning/test_03_environment_setup/test_python_environment.py) shows environment assertions.
+- [`test_pytest_behaviour.py`](../../tests/learning/test_03_environment_setup/test_pytest_behaviour.py) shows basic pytest behavior.
+- [`tests/conftest.py`](../../tests/conftest.py) contains fixtures used by the tests.
+- [`pyproject.toml`](../../pyproject.toml) defines discovery rules and markers.
 
 ## Key Takeaways
 
@@ -181,4 +181,3 @@ The file path, test name, and assertion detail tell you where to look first.
 - Plain Python `assert` is the normal assertion style.
 - Fixtures are shared setup supplied by pytest through function parameters.
 - Markers let you select meaningful subsets of tests.
-

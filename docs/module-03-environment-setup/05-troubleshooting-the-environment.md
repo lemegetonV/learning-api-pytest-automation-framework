@@ -67,12 +67,12 @@ Common causes:
 | --- | --- | --- |
 | `collected 0 items` | File does not start with `test_` | Rename to `test_name.py` |
 | Test function ignored | Function does not start with `test_` | Rename to `test_name` |
-| Marker warning | Marker not registered | Add marker to `pyproject.toml` |
+| Marker warning | Marker not registered | Add marker to [`pyproject.toml`](../../pyproject.toml) |
 | Import error | Package missing or wrong interpreter | Reinstall inside `.venv` |
 
 ## Check The Project Root
 
-Run tests from the project root, where `pyproject.toml` lives.
+Run tests from the project root, where [`pyproject.toml`](../../pyproject.toml) lives.
 
 ```bash
 pwd
@@ -102,8 +102,8 @@ fixture 'jsonplaceholder_base_url' not found
 
 Check:
 
-- The fixture exists in `tests/conftest.py`.
-- The test is under `tests/` so pytest can see that `conftest.py`.
+- The fixture exists in [`tests/conftest.py`](../../tests/conftest.py).
+- The test is under [`tests/`](../../tests/) so pytest can see [`tests/conftest.py`](../../tests/conftest.py).
 - The parameter name is spelled exactly like the fixture name.
 
 Fixtures are matched by name.
@@ -141,5 +141,4 @@ Do not commit `.venv/`, `.pytest_cache/`, `__pycache__/`, or generated reports.
 - Use `python -m pytest --collect-only` to debug discovery.
 - `FAILED` means an assertion failed; `ERROR` means the test could not run cleanly.
 - Fixtures are injected by exact parameter name.
-- Rebuild `.venv/` from `requirements.txt` when local package state is confusing.
-
+- Rebuild `.venv/` from [`requirements.txt`](../../requirements.txt) when local package state is confusing.

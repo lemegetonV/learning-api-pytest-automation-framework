@@ -34,7 +34,7 @@ Expected outcome:
 
 - pytest is available.
 - requests is available.
-- The versions match `requirements.txt`.
+- The versions match [`requirements.txt`](../../requirements.txt).
 
 Hint: use `python -m pip`, not a standalone `pip`, so the installer belongs to the active Python interpreter.
 
@@ -60,7 +60,7 @@ Expected outcome:
 - You can explain why collected tests were found.
 - You can explain why incorrectly named files or functions would be ignored.
 
-Hint: compare your answer to `python_files`, `python_classes`, and `python_functions` in `pyproject.toml`.
+Hint: compare your answer to `python_files`, `python_classes`, and `python_functions` in [`pyproject.toml`](../../pyproject.toml).
 
 ## Exercise 4: Run The Module Tests
 
@@ -79,7 +79,7 @@ Hint: the output includes the full test node id: `path::test_name`.
 
 ## Exercise 5: Break One Assertion On Purpose
 
-Temporarily change one assertion in `tests/learning/test_03_environment_setup/test_pytest_behaviour.py` so it fails.
+Temporarily change one assertion in [`test_pytest_behaviour.py`](../../tests/learning/test_03_environment_setup/test_pytest_behaviour.py) so it fails.
 
 Run:
 
@@ -100,7 +100,7 @@ Expected outcome:
 
 ## Exercise 6: Inspect A Prepared Request
 
-Open `tests/learning/test_03_environment_setup/test_requests_preparation.py`.
+Open [`test_requests_preparation.py`](../../tests/learning/test_03_environment_setup/test_requests_preparation.py).
 
 Add a new test that prepares a request for:
 
@@ -121,12 +121,11 @@ Hint: use `requests.Request(..., params={"postId": 1}).prepare()`.
 Write short answers for yourself:
 
 1. Why is `.venv/` not committed?
-2. Why is `requirements.txt` committed?
+2. Why is [`requirements.txt`](../../requirements.txt) committed?
 3. Why do we run `python -m pytest`?
-4. What does `tests/conftest.py` provide?
+4. What does [`tests/conftest.py`](../../tests/conftest.py) provide?
 5. Why does Module 03 avoid live API calls?
 
 Expected outcome:
 
 - You can describe the environment setup without memorizing commands blindly.
-

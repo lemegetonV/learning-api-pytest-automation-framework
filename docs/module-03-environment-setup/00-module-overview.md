@@ -10,11 +10,11 @@ The important skill here is not "install pytest once." The skill is knowing how 
 
 | Area | Project file | Why it matters |
 | --- | --- | --- |
-| Dependency recipe | `requirements.txt` | Pins the packages needed for the current module |
-| Test configuration | `pyproject.toml` | Teaches pytest where tests live and how to name them |
-| Shared test setup | `tests/conftest.py` | Introduces fixtures without building framework architecture yet |
-| Learning tests | `tests/learning/test_03_environment_setup/` | Proves Python, pytest, and requests are wired correctly |
-| Setup docs | `docs/module-03-environment-setup/` | Explains how to reproduce and troubleshoot the environment |
+| Dependency recipe | [`requirements.txt`](../../requirements.txt) | Pins the packages needed for the current module |
+| Test configuration | [`pyproject.toml`](../../pyproject.toml) | Teaches pytest where tests live and how to name them |
+| Shared test setup | [`tests/conftest.py`](../../tests/conftest.py) | Introduces fixtures without building framework architecture yet |
+| Learning tests | [`tests/learning/test_03_environment_setup/`](../../tests/learning/test_03_environment_setup) | Proves Python, pytest, and requests are wired correctly |
+| Setup docs | [`docs/module-03-environment-setup/`](.) | Explains how to reproduce and troubleshoot the environment |
 
 ## Learning Path
 
@@ -33,23 +33,24 @@ flowchart TD
 
 Read these in order:
 
-1. `01-virtual-environments-and-dependencies.md`
-2. `02-project-structure-and-configuration.md`
-3. `03-pytest-basics-and-discovery.md`
-4. `04-requests-library-setup.md`
-5. `05-troubleshooting-the-environment.md`
-6. `exercises.md`
+1. [`01-virtual-environments-and-dependencies.md`](01-virtual-environments-and-dependencies.md)
+2. [`02-project-structure-and-configuration.md`](02-project-structure-and-configuration.md)
+3. [`03-pytest-basics-and-discovery.md`](03-pytest-basics-and-discovery.md)
+4. [`04-requests-library-setup.md`](04-requests-library-setup.md)
+5. [`05-troubleshooting-the-environment.md`](05-troubleshooting-the-environment.md)
+6. [`06-checkpoint-deep-dive.md`](06-checkpoint-deep-dive.md)
+7. [`exercises.md`](exercises.md)
 
 ## What You Should Be Able To Do
 
 By the end of the module, you should be able to:
 
 - Create and activate a Python virtual environment.
-- Explain why `.venv/` is ignored but `requirements.txt` is committed.
+- Explain why `.venv/` is ignored but [`requirements.txt`](../../requirements.txt) is committed.
 - Install the exact dependencies required by the project.
-- Read the pytest configuration in `pyproject.toml`.
+- Read the pytest configuration in [`pyproject.toml`](../../pyproject.toml).
 - Predict which files pytest will collect as tests.
-- Understand why shared setup belongs in `tests/conftest.py`.
+- Understand why shared setup belongs in [`tests/conftest.py`](../../tests/conftest.py).
 - Run the Module 03 learning tests and interpret the output.
 - Troubleshoot the common setup failures that block beginners.
 
@@ -63,10 +64,10 @@ The learning tests in this module verify that `requests` can build HTTP requests
 
 After this module is implemented, use these files while reading:
 
-- `tests/conftest.py` for the first shared fixtures.
-- `tests/learning/test_03_environment_setup/test_python_environment.py` for Python and dependency checks.
-- `tests/learning/test_03_environment_setup/test_pytest_behaviour.py` for pytest assertion examples.
-- `tests/learning/test_03_environment_setup/test_requests_preparation.py` for local request preparation checks.
+- [`tests/conftest.py`](../../tests/conftest.py) for the first shared fixtures.
+- [`test_python_environment.py`](../../tests/learning/test_03_environment_setup/test_python_environment.py) for Python and dependency checks.
+- [`test_pytest_behaviour.py`](../../tests/learning/test_03_environment_setup/test_pytest_behaviour.py) for pytest assertion examples.
+- [`test_requests_preparation.py`](../../tests/learning/test_03_environment_setup/test_requests_preparation.py) for local request preparation checks.
 
 ## Quality Gate
 
@@ -74,7 +75,6 @@ Module 03 is complete when:
 
 - `python -m pytest tests/learning/test_03_environment_setup -v` passes.
 - `python -m pytest tests/ -v` passes.
-- `CLAUDE.md` and `AGENTS.md` are identical.
+- [`CLAUDE.md`](../../CLAUDE.md) and [`AGENTS.md`](../../AGENTS.md) are identical.
 - The docs explain every new file and command introduced in this module.
 - Exercises are present and require the learner to run, inspect, and modify code.
-

@@ -23,7 +23,7 @@ From the project root:
 python -m venv .venv
 ```
 
-This creates a `.venv/` directory. The directory is ignored by git because it is machine-specific generated output. The reproducible source of truth is `requirements.txt`.
+This creates a `.venv/` directory. The directory is ignored by git because it is machine-specific generated output. The reproducible source of truth is [`requirements.txt`](../../requirements.txt).
 
 ## Activate The Environment
 
@@ -68,7 +68,7 @@ pytest==8.3.4
 requests==2.32.3
 ```
 
-Later module dependencies stay commented in `requirements.txt` until the module needs them. That keeps the learner from installing tools before understanding why they exist.
+Later module dependencies stay commented in [`requirements.txt`](../../requirements.txt) until the module needs them. That keeps the learner from installing tools before understanding why they exist.
 
 ## Why Pin Versions
 
@@ -115,13 +115,13 @@ Expected result:
 - requests prints version `2.32.3`.
 - Module 03 tests pass.
 
-## `requirements.txt` vs `.venv/`
+## [`requirements.txt`](../../requirements.txt) vs `.venv/`
 
 | Item | Commit to git? | Reason |
 | --- | --- | --- |
-| `requirements.txt` | Yes | It is the recipe for rebuilding dependencies |
+| [`requirements.txt`](../../requirements.txt) | Yes | It is the recipe for rebuilding dependencies |
 | `.venv/` | No | It is generated, large, and machine-specific |
-| `.env.example` | Yes | It documents expected environment variables |
+| [`.env.example`](../../.env.example) | Yes | It documents expected environment variables |
 | `.env` | No | It may contain secrets or personal local settings |
 
 ## Common Commands
@@ -143,7 +143,6 @@ deactivate
 ## Key Takeaways
 
 - A virtual environment isolates project dependencies.
-- `.venv/` is local generated state; `requirements.txt` is the committed recipe.
+- `.venv/` is local generated state; [`requirements.txt`](../../requirements.txt) is the committed recipe.
 - `python -m pip` and `python -m pytest` reduce interpreter confusion.
 - Dependencies are introduced only when the learning path needs them.
-
