@@ -27,10 +27,10 @@ Each file has a clear responsibility:
 
 | File | Responsibility |
 | --- | --- |
-| `test_smoke.py` | small reachability and JSON sanity checks |
-| `test_posts.py` | `/posts` single, collection, filter, headers, negative checks |
-| `test_comments.py` | `/comments` and `/posts/{id}/comments` relationship checks |
-| `test_users.py` | `/users` nested object checks and simple cross-resource validation |
+| [`test_smoke.py`](../../tests/learning/test_04_basic_get/test_smoke.py) | small reachability and JSON sanity checks |
+| [`test_posts.py`](../../tests/learning/test_04_basic_get/test_posts.py) | `/posts` single, collection, filter, headers, negative checks |
+| [`test_comments.py`](../../tests/learning/test_04_basic_get/test_comments.py) | `/comments` and `/posts/{id}/comments` relationship checks |
+| [`test_users.py`](../../tests/learning/test_04_basic_get/test_users.py) | `/users` nested object checks and simple cross-resource validation |
 
 ## Test Naming
 
@@ -54,7 +54,7 @@ When pytest runs with `-v`, the test names become the report. Good names make fa
 
 ## Fixture Use
 
-Module 04 tests use shared fixtures from `tests/conftest.py`:
+Module 04 tests use shared fixtures from [`tests/conftest.py`](../../tests/conftest.py):
 
 ```python
 def test_get_single_post_returns_expected_post(
@@ -122,11 +122,11 @@ In real projects, live API test suites need environment controls, retry policy, 
 
 ## Code References
 
-- `tests/learning/test_04_basic_get/test_smoke.py`
-- `tests/learning/test_04_basic_get/test_posts.py`
-- `tests/learning/test_04_basic_get/test_comments.py`
-- `tests/learning/test_04_basic_get/test_users.py`
-- `tests/conftest.py`
+- [`test_smoke.py`](../../tests/learning/test_04_basic_get/test_smoke.py)
+- [`test_posts.py`](../../tests/learning/test_04_basic_get/test_posts.py)
+- [`test_comments.py`](../../tests/learning/test_04_basic_get/test_comments.py)
+- [`test_users.py`](../../tests/learning/test_04_basic_get/test_users.py)
+- [`tests/conftest.py`](../../tests/conftest.py)
 
 ## Key Takeaways
 
@@ -135,4 +135,3 @@ In real projects, live API test suites need environment controls, retry policy, 
 - Use shared fixtures for base URL and timeout.
 - Keep raw request logic explicit until the learner understands it.
 - Live API tests can fail for environment reasons, so read failure output carefully.
-

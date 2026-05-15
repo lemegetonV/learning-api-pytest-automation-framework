@@ -32,8 +32,8 @@ def test_get_single_post(jsonplaceholder_base_url, default_timeout_seconds):
 
 Important details:
 
-- `jsonplaceholder_base_url` comes from `tests/conftest.py`.
-- `default_timeout_seconds` also comes from `tests/conftest.py`.
+- `jsonplaceholder_base_url` comes from [`tests/conftest.py`](../../tests/conftest.py).
+- `default_timeout_seconds` also comes from [`tests/conftest.py`](../../tests/conftest.py).
 - `timeout=` prevents the test from hanging indefinitely.
 - `response.status_code` is asserted before body fields.
 
@@ -65,7 +65,7 @@ assert post["id"] == 1
 assert post["userId"] == 1
 ```
 
-See `tests/learning/test_04_basic_get/test_posts.py`.
+See [`test_posts.py`](../../tests/learning/test_04_basic_get/test_posts.py).
 
 ## Collection Resource
 
@@ -161,10 +161,10 @@ This proves the API does not pretend a missing resource exists.
 
 ## Code References
 
-- `tests/learning/test_04_basic_get/test_smoke.py` shows the smallest live API checks.
-- `tests/learning/test_04_basic_get/test_posts.py` shows single resource, collection, filtering, and 404 checks.
-- `tests/learning/test_04_basic_get/test_comments.py` shows nested resource checks.
-- `tests/conftest.py` provides the shared base URL and timeout.
+- [`test_smoke.py`](../../tests/learning/test_04_basic_get/test_smoke.py) shows the smallest live API checks.
+- [`test_posts.py`](../../tests/learning/test_04_basic_get/test_posts.py) shows single resource, collection, filtering, and 404 checks.
+- [`test_comments.py`](../../tests/learning/test_04_basic_get/test_comments.py) shows nested resource checks.
+- [`tests/conftest.py`](../../tests/conftest.py) provides the shared base URL and timeout.
 
 ## Key Takeaways
 
@@ -174,4 +174,3 @@ This proves the API does not pretend a missing resource exists.
 - Assert the status code before parsing and checking body fields.
 - Single resources usually parse to dictionaries; collections parse to lists.
 - Negative GET tests protect error behavior.
-

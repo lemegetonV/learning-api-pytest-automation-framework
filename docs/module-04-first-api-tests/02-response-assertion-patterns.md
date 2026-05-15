@@ -186,9 +186,9 @@ assert {"userId", "id", "title", "body"} == set(post.keys())
 
 ## Code References
 
-- `tests/learning/test_04_basic_get/test_posts.py` contains status, field, type, header, and timing assertions.
-- `tests/learning/test_04_basic_get/test_comments.py` contains relationship assertions.
-- `tests/learning/test_04_basic_get/test_users.py` contains nested object assertions.
+- [`test_posts.py`](../../tests/learning/test_04_basic_get/test_posts.py) contains status, field, type, header, and timing assertions.
+- [`test_comments.py`](../../tests/learning/test_04_basic_get/test_comments.py) contains relationship assertions.
+- [`test_users.py`](../../tests/learning/test_04_basic_get/test_users.py) contains nested object assertions.
 
 ## Key Takeaways
 
@@ -198,4 +198,3 @@ assert {"userId", "id", "title", "body"} == set(post.keys())
 - Use `all()` for filtered collections.
 - Check important headers without overfitting to unstable values.
 - Response time checks in this module are lightweight guards, not load tests.
-

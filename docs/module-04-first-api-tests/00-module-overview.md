@@ -10,11 +10,11 @@ This is the first point where the framework depends on an external API, so the m
 
 | Area | Project file | Why it matters |
 | --- | --- | --- |
-| Live smoke tests | `tests/learning/test_04_basic_get/test_smoke.py` | Proves JSONPlaceholder is reachable and returns JSON |
-| Posts tests | `tests/learning/test_04_basic_get/test_posts.py` | Covers single resources, collections, filtering, headers, and 404s |
-| Comments tests | `tests/learning/test_04_basic_get/test_comments.py` | Covers nested routes and query parameter equivalence |
-| Users tests | `tests/learning/test_04_basic_get/test_users.py` | Covers nested JSON objects and cross-item validation |
-| Learning docs | `docs/module-04-first-api-tests/` | Explains each test pattern before and beside the code |
+| Live smoke tests | [`test_smoke.py`](../../tests/learning/test_04_basic_get/test_smoke.py) | Proves JSONPlaceholder is reachable and returns JSON |
+| Posts tests | [`test_posts.py`](../../tests/learning/test_04_basic_get/test_posts.py) | Covers single resources, collections, filtering, headers, and 404s |
+| Comments tests | [`test_comments.py`](../../tests/learning/test_04_basic_get/test_comments.py) | Covers nested routes and query parameter equivalence |
+| Users tests | [`test_users.py`](../../tests/learning/test_04_basic_get/test_users.py) | Covers nested JSON objects and cross-item validation |
+| Learning docs | [`docs/module-04-first-api-tests/`](.) | Explains each test pattern before and beside the code |
 
 ## Learning Path
 
@@ -33,11 +33,12 @@ flowchart TD
 
 Read in this order:
 
-1. `01-get-requests-with-requests.md`
-2. `02-response-assertion-patterns.md`
-3. `03-query-parameters-and-nested-resources.md`
-4. `04-organizing-first-api-tests.md`
-5. `exercises.md`
+1. [`01-get-requests-with-requests.md`](01-get-requests-with-requests.md)
+2. [`02-response-assertion-patterns.md`](02-response-assertion-patterns.md)
+3. [`03-query-parameters-and-nested-resources.md`](03-query-parameters-and-nested-resources.md)
+4. [`04-organizing-first-api-tests.md`](04-organizing-first-api-tests.md)
+5. [`05-checkpoint-deep-dive.md`](05-checkpoint-deep-dive.md)
+6. [`exercises.md`](exercises.md)
 
 ## API Under Test
 
@@ -47,7 +48,7 @@ Module 04 uses JSONPlaceholder:
 https://jsonplaceholder.typicode.com
 ```
 
-The shared base URL comes from `tests/conftest.py`:
+The shared base URL comes from [`tests/conftest.py`](../../tests/conftest.py):
 
 ```python
 @pytest.fixture
@@ -105,10 +106,9 @@ It does not create, update, or delete data. Module 05 introduces `POST`, `PUT`, 
 
 Module 04 is complete when:
 
-- All docs in `docs/module-04-first-api-tests/` exist.
-- GET tests exist under `tests/learning/test_04_basic_get/`.
-- The tests use shared fixtures from `tests/conftest.py`.
+- All docs in [`docs/module-04-first-api-tests/`](.) exist.
+- GET tests exist under [`tests/learning/test_04_basic_get/`](../../tests/learning/test_04_basic_get/).
+- The tests use shared fixtures from [`tests/conftest.py`](../../tests/conftest.py).
 - The tests pass with `python -m pytest tests/learning/test_04_basic_get -v`.
 - The full suite passes with `python -m pytest tests/ -v`.
 - Every new test file is referenced by at least one concept doc.
-

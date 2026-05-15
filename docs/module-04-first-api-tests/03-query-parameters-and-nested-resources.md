@@ -140,10 +140,10 @@ Avoid mixing too many relationships in one test. If a test calls five endpoints 
 
 ## Code References
 
-- `tests/learning/test_04_basic_get/test_posts.py::test_filter_posts_by_user_id_returns_only_that_users_posts`
-- `tests/learning/test_04_basic_get/test_comments.py::test_get_comments_for_post_returns_only_that_posts_comments`
-- `tests/learning/test_04_basic_get/test_comments.py::test_nested_comments_route_matches_post_id_filter`
-- `tests/learning/test_04_basic_get/test_users.py::test_post_user_id_points_to_existing_user`
+- [`test_posts.py`](../../tests/learning/test_04_basic_get/test_posts.py) `::test_filter_posts_by_user_id_returns_only_that_users_posts`
+- [`test_comments.py`](../../tests/learning/test_04_basic_get/test_comments.py) `::test_get_comments_for_post_returns_only_that_posts_comments`
+- [`test_comments.py`](../../tests/learning/test_04_basic_get/test_comments.py) `::test_nested_comments_route_matches_post_id_filter`
+- [`test_users.py`](../../tests/learning/test_04_basic_get/test_users.py) `::test_post_user_id_points_to_existing_user`
 
 ## Key Takeaways
 
@@ -152,4 +152,3 @@ Avoid mixing too many relationships in one test. If a test calls five endpoints 
 - Nested resources express ownership or relationship in the path.
 - Equivalent routes can be compared by stable IDs.
 - Cross-resource checks are useful, but keep them focused.
-
