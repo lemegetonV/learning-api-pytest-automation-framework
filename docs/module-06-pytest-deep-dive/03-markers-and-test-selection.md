@@ -18,7 +18,7 @@ python -m pytest -m smoke
 
 ## Registered Project Markers
 
-`pyproject.toml` registers:
+[`pyproject.toml`](../../pyproject.toml) registers:
 
 | Marker | Purpose |
 | --- | --- |
@@ -103,14 +103,13 @@ Every test in that file gets the marker.
 
 ## Code References
 
-- `pyproject.toml` registers project markers.
-- `tests/learning/test_06_pytest_features/test_markers.py` demonstrates skip, xfail, smoke, and regression.
-- `tests/learning/test_04_basic_get/test_smoke.py` contains real smoke tests.
+- [`pyproject.toml`](../../pyproject.toml) registers project markers.
+- [`test_markers.py`](../../tests/learning/test_06_pytest_features/test_markers.py) demonstrates skip, xfail, smoke, and regression.
+- [`test_smoke.py`](../../tests/learning/test_04_basic_get/test_smoke.py) contains real smoke tests.
 
 ## Key Takeaways
 
 - Markers label tests for selection.
 - `skip` does not run the test; `xfail` runs it but expects failure.
-- Register custom markers in `pyproject.toml`.
+- Register custom markers in [`pyproject.toml`](../../pyproject.toml).
 - Use `-m` for marker expressions and `-k` for name expressions.
-

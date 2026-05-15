@@ -87,9 +87,9 @@ The learning lane teaches concepts. The capstone lane will look more like a prod
 
 ## Code References
 
-- `tests/learning/test_06_pytest_features/test_classes.py`
-- `tests/learning/test_04_basic_get/test_posts.py`
-- `tests/learning/test_05_crud/test_crud_lifecycle.py`
+- [`test_classes.py`](../../tests/learning/test_06_pytest_features/test_classes.py)
+- [`test_posts.py`](../../tests/learning/test_04_basic_get/test_posts.py)
+- [`test_crud_lifecycle.py`](../../tests/learning/test_05_crud/test_crud_lifecycle.py)
 
 ## Key Takeaways
 
@@ -98,4 +98,3 @@ The learning lane teaches concepts. The capstone lane will look more like a prod
 - Fixtures still work inside classes.
 - Class markers apply to all methods.
 - Keep learning tests module-oriented until the capstone.
-

@@ -106,8 +106,8 @@ Use separate tests when each case has different logic or different meaning.
 
 ## Code References
 
-- `tests/learning/test_06_pytest_features/test_parametrize.py`
-- `tests/learning/test_04_basic_get/test_posts.py` shows repeated patterns that parametrization can reduce later.
+- [`test_parametrize.py`](../../tests/learning/test_06_pytest_features/test_parametrize.py)
+- [`test_posts.py`](../../tests/learning/test_04_basic_get/test_posts.py) shows repeated patterns that parametrization can reduce later.
 
 ## Key Takeaways
 
@@ -116,4 +116,3 @@ Use separate tests when each case has different logic or different meaning.
 - Use custom IDs for readable reports.
 - Mark individual parameter sets when needed.
 - Do not over-parametrize tests with different logic.
-

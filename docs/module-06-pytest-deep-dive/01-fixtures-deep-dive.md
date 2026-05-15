@@ -9,7 +9,7 @@ def test_get_post(jsonplaceholder_base_url):
     assert jsonplaceholder_base_url.startswith("https://")
 ```
 
-The fixture lives in `tests/conftest.py`, and no import is needed.
+The fixture lives in [`tests/conftest.py`](../../tests/conftest.py), and no import is needed.
 
 ## Fixture Scope
 
@@ -89,14 +89,14 @@ Scope rule: a broad fixture cannot depend on a narrower fixture. A session fixtu
 
 ## conftest Hierarchy
 
-`conftest.py` files apply to their directory and child directories.
+[`conftest.py`](../../tests/conftest.py) files apply to their directory and child directories.
 
 ```text
 tests/conftest.py
 tests/learning/test_06_pytest_features/conftest.py
 ```
 
-Global fixtures belong in `tests/conftest.py`. Demo-only fixtures for Module 06 belong in `tests/learning/test_06_pytest_features/conftest.py`.
+Global fixtures belong in [`tests/conftest.py`](../../tests/conftest.py). Demo-only fixtures for Module 06 belong in [`tests/learning/test_06_pytest_features/conftest.py`](../../tests/learning/test_06_pytest_features/conftest.py).
 
 ## Autouse Fixtures
 
@@ -106,9 +106,9 @@ Use it sparingly. It can be helpful for class-level setup, logging, or cleanup, 
 
 ## Code References
 
-- `tests/conftest.py` shows session-scoped fixtures and `api_session`.
-- `tests/learning/test_06_pytest_features/conftest.py` shows a local fixture.
-- `tests/learning/test_06_pytest_features/test_classes.py` shows class-level autouse setup.
+- [`tests/conftest.py`](../../tests/conftest.py) shows session-scoped fixtures and `api_session`.
+- [`tests/learning/test_06_pytest_features/conftest.py`](../../tests/learning/test_06_pytest_features/conftest.py) shows a local fixture.
+- [`test_classes.py`](../../tests/learning/test_06_pytest_features/test_classes.py) shows class-level autouse setup.
 
 ## Key Takeaways
 
@@ -117,4 +117,3 @@ Use it sparingly. It can be helpful for class-level setup, logging, or cleanup, 
 - Yield fixtures add reliable teardown.
 - Fixtures can depend on fixtures.
 - Put shared fixtures at the highest directory where they are truly needed.
-

@@ -10,11 +10,11 @@ Modules 03-05 used pytest basics. Module 06 explains the pytest features that ma
 
 | Area | Project file | Why it matters |
 | --- | --- | --- |
-| Rich shared fixtures | `tests/conftest.py` | Adds session-scoped base URL, timeout, and `api_session` |
-| Local fixtures | `tests/learning/test_06_pytest_features/conftest.py` | Shows fixture hierarchy for one test directory |
-| Parametrize examples | `tests/learning/test_06_pytest_features/test_parametrize.py` | Replaces copy-paste tests with data-driven cases |
-| Marker examples | `tests/learning/test_06_pytest_features/test_markers.py` | Demonstrates selection, skip, xfail, smoke, regression |
-| Class examples | `tests/learning/test_06_pytest_features/test_classes.py` | Groups related tests without sharing unsafe state |
+| Rich shared fixtures | [`tests/conftest.py`](../../tests/conftest.py) | Adds session-scoped base URL, timeout, and `api_session` |
+| Local fixtures | [`test_06_pytest_features/conftest.py`](../../tests/learning/test_06_pytest_features/conftest.py) | Shows fixture hierarchy for one test directory |
+| Parametrize examples | [`test_parametrize.py`](../../tests/learning/test_06_pytest_features/test_parametrize.py) | Replaces copy-paste tests with data-driven cases |
+| Marker examples | [`test_markers.py`](../../tests/learning/test_06_pytest_features/test_markers.py) | Demonstrates selection, skip, xfail, smoke, regression |
+| Class examples | [`test_classes.py`](../../tests/learning/test_06_pytest_features/test_classes.py) | Groups related tests without sharing unsafe state |
 
 ## Learning Path
 
@@ -32,11 +32,12 @@ flowchart TD
 
 Read in this order:
 
-1. `01-fixtures-deep-dive.md`
-2. `02-parametrize-data-driven-tests.md`
-3. `03-markers-and-test-selection.md`
-4. `04-test-organization-classes-and-layout.md`
-5. `exercises.md`
+1. [`01-fixtures-deep-dive.md`](01-fixtures-deep-dive.md)
+2. [`02-parametrize-data-driven-tests.md`](02-parametrize-data-driven-tests.md)
+3. [`03-markers-and-test-selection.md`](03-markers-and-test-selection.md)
+4. [`04-test-organization-classes-and-layout.md`](04-test-organization-classes-and-layout.md)
+5. [`05-checkpoint-deep-dive.md`](05-checkpoint-deep-dive.md)
+6. [`exercises.md`](exercises.md)
 
 ## Why This Module Matters
 
@@ -56,9 +57,8 @@ Pytest gives you tools to manage that repetition without hiding intent too early
 Module 06 is complete when:
 
 - Docs explain fixture scope, yield teardown, parametrization, markers, and classes.
-- `tests/conftest.py` contains the reusable session fixture.
-- Demo tests exist under `tests/learning/test_06_pytest_features/`.
+- [`tests/conftest.py`](../../tests/conftest.py) contains the reusable session fixture.
+- Demo tests exist under [`tests/learning/test_06_pytest_features/`](../../tests/learning/test_06_pytest_features/).
 - Module tests pass with `python -m pytest tests/learning/test_06_pytest_features -v`.
 - The full suite exits successfully with `python -m pytest tests/ -v`.
 - Docs reference the actual files added in this module.
-

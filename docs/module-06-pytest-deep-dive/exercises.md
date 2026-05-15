@@ -2,7 +2,7 @@
 
 ## Exercise 1: Add A Local Fixture
 
-In `tests/learning/test_06_pytest_features/conftest.py`, add a fixture named `known_post`.
+In [`tests/learning/test_06_pytest_features/conftest.py`](../../tests/learning/test_06_pytest_features/conftest.py), add a fixture named `known_post`.
 
 It should return:
 
@@ -78,4 +78,3 @@ In your own notes, answer:
 2. When should a test be marked xfail?
 3. Why can xfail be better than deleting a test for a known bug?
 4. What does XPASS mean?
-
