@@ -18,13 +18,13 @@ flowchart LR
 
 ## Dependency
 
-`pytest-html` is active in `requirements.txt`:
+`pytest-html` is active in [`requirements.txt`](../../requirements.txt):
 
 ```text
 pytest-html==4.1.1
 ```
 
-The plugin is verified by `tests/learning/test_14_reporting/test_reporting_plugins.py`.
+The plugin is verified by [`test_reporting_plugins.py`](../../tests/learning/test_14_reporting/test_reporting_plugins.py).
 
 ## Local HTML Report Command
 
@@ -58,7 +58,7 @@ reports/pytest-report.html
 reports/junit.xml
 ```
 
-The workflow then uploads the `reports/` directory with `actions/upload-artifact@v4`.
+The workflow then uploads the [`reports/`](../../reports/) directory with `actions/upload-artifact@v4`.
 
 ## When HTML Helps
 

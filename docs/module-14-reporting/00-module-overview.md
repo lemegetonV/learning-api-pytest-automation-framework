@@ -8,12 +8,12 @@ The important learning goal is not just producing files. It is learning what inf
 
 | Area | Files | Purpose |
 | --- | --- | --- |
-| Reporting dependencies | `requirements.txt` | Activates `pytest-html` and `allure-pytest` |
-| Reporting marker | `pyproject.toml` | Adds `@pytest.mark.reporting` |
-| Report helpers | `src/utils/reporting.py` | Builds redacted response context for reports and logs |
-| URL redaction | `src/utils/security.py` | Redacts sensitive query values before URLs enter report context |
-| Reporting tests | `tests/learning/test_14_reporting/` | Verifies plugins, logs, safe context, and CI artifact settings |
-| CI report artifacts | `.github/workflows/api-tests.yml` | Generates HTML, Allure result files, JUnit XML, and uploads `reports/` |
+| Reporting dependencies | [`requirements.txt`](../../requirements.txt) | Activates `pytest-html` and `allure-pytest` |
+| Reporting marker | [`pyproject.toml`](../../pyproject.toml) | Adds `@pytest.mark.reporting` |
+| Report helpers | [`src/utils/reporting.py`](../../src/utils/reporting.py) | Builds redacted response context for reports and logs |
+| URL redaction | [`src/utils/security.py`](../../src/utils/security.py) | Redacts sensitive query values before URLs enter report context |
+| Reporting tests | [`tests/learning/test_14_reporting/`](../../tests/learning/test_14_reporting/) | Verifies plugins, logs, safe context, and CI artifact settings |
+| CI report artifacts | [`.github/workflows/api-tests.yml`](../../.github/workflows/api-tests.yml) | Generates HTML, Allure result files, JUnit XML, and uploads `reports/` |
 
 ## Learning Flow
 
@@ -37,13 +37,14 @@ flowchart TD
 
 | Concept | What you learn | Code reference |
 | --- | --- | --- |
-| HTML reporting | Generate a self-contained pytest report | `pytest-html` in `requirements.txt` |
-| Allure results | Generate structured result files for Allure | `allure-pytest` in `requirements.txt` |
-| JUnit XML | Produce CI-consumable test result XML | `.github/workflows/api-tests.yml` |
+| HTML reporting | Generate a self-contained pytest report | `pytest-html` in [`requirements.txt`](../../requirements.txt) |
+| Allure results | Generate structured result files for Allure | `allure-pytest` in [`requirements.txt`](../../requirements.txt) |
+| JUnit XML | Produce CI-consumable test result XML | [`.github/workflows/api-tests.yml`](../../.github/workflows/api-tests.yml) |
 | Report artifacts | Upload generated `reports/` files from CI | `actions/upload-artifact@v4` |
-| Safe report context | Attach method, URL, status, request id, headers, and body preview | `src/utils/reporting.py` |
-| Secret redaction | Redact auth headers and sensitive query values | `src/utils/security.py` |
-| Logging for reports | Verify request/response summary logs | `test_logging_output.py` |
+| Safe report context | Attach method, URL, status, request id, headers, and body preview | [`src/utils/reporting.py`](../../src/utils/reporting.py) |
+| Secret redaction | Redact auth headers and sensitive query values | [`src/utils/security.py`](../../src/utils/security.py) |
+| Logging for reports | Verify request/response summary logs | [`test_logging_output.py`](../../tests/learning/test_14_reporting/test_logging_output.py) |
+| Checkpoint review | Report-context flow, artifact responsibilities, failure model, and interview review | [`06-checkpoint-deep-dive.md`](06-checkpoint-deep-dive.md) |
 
 ## Reporting Pipeline
 
@@ -77,7 +78,7 @@ Module 14 is complete when:
 - report helper tests verify redaction of sensitive headers and URL query values.
 - API client logging is verified with `caplog`.
 - CI generates HTML, Allure result files, and JUnit XML.
-- CI uploads `reports/` as an artifact.
+- CI uploads [`reports/`](../../reports/) as an artifact.
 - docs link every reporting concept to real files.
 - `python -m pytest tests/learning/test_14_reporting -v` passes.
 - a sample report-generation command passes.

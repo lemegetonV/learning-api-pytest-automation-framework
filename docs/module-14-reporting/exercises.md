@@ -13,7 +13,7 @@ python -m pytest tests/learning/test_14_reporting \
 Expected outcome:
 
 - tests pass
-- an HTML report is generated under `reports/`
+- an HTML report is generated under [`reports/`](../../reports/)
 
 ## Exercise 2: Generate Allure Result Files
 
@@ -31,7 +31,7 @@ Expected outcome:
 
 ## Exercise 3: Add A Request Id Case
 
-Open `tests/learning/test_14_reporting/test_safe_report_context.py`.
+Open [`test_safe_report_context.py`](../../tests/learning/test_14_reporting/test_safe_report_context.py).
 
 Add a test where the response body contains:
 
@@ -47,7 +47,7 @@ Expected outcome:
 
 ## Exercise 4: Add A New Sensitive Query Name
 
-Open `src/utils/security.py`.
+Open [`src/utils/security.py`](../../src/utils/security.py).
 
 Add `session_id` to the sensitive query parameter names.
 
@@ -82,12 +82,17 @@ Expected outcome:
 
 - you can connect reports to real failure analysis
 
-## Exercise 7: Check Logs With Caplog
+## Exercise 7: Check Log Boundaries With Caplog
 
-Read `tests/learning/test_14_reporting/test_logging_output.py`.
+Read [`test_logging_output.py`](../../tests/learning/test_14_reporting/test_logging_output.py).
 
-Add an assertion that the logged URL contains `/health`.
+Add assertions that prove the API client logs only request/response summaries:
+
+- the log includes the request line `GET https://service.test/health`
+- the log includes `Response: 200 OK`
+- the log does not include the response body value `{"ok": true}`
 
 Expected outcome:
 
 - you understand how `caplog` captures framework logs during a test
+- you can explain why reports may include safe response context, but routine request logs should stay compact

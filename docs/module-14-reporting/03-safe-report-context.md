@@ -2,7 +2,7 @@
 
 Reports are useful only when they contain enough context to debug failures. But API reports often touch sensitive values such as bearer tokens, API keys, cookies, and query-string tokens.
 
-Module 14 adds `src/utils/reporting.py` to build safe response context.
+Module 14 adds [`src/utils/reporting.py`](../../src/utils/reporting.py) to build safe response context.
 
 ## Context Shape
 
@@ -39,7 +39,7 @@ flowchart TD
 
 ## Header Redaction
 
-The reporting helper reuses `redact_headers()` from `src/utils/security.py`.
+The reporting helper reuses `redact_headers()` from [`src/utils/security.py`](../../src/utils/security.py).
 
 The test `test_response_context_redacts_sensitive_headers` verifies:
 
@@ -49,7 +49,7 @@ The test `test_response_context_redacts_sensitive_headers` verifies:
 
 ## URL Query Redaction
 
-Module 14 extends `src/utils/security.py` with:
+Module 14 extends [`src/utils/security.py`](../../src/utils/security.py) with:
 
 ```python
 redact_url_query_params(url)

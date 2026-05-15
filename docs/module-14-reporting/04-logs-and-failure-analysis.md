@@ -2,7 +2,7 @@
 
 Reports show what failed. Logs help explain how the test reached that failure.
 
-The framework already logs request and response summaries in `src/api_client/client.py`:
+The framework already logs request and response summaries in [`src/api_client/client.py`](../../src/api_client/client.py):
 
 ```python
 logger.info("%s %s", method, url)
@@ -30,7 +30,7 @@ sequenceDiagram
 
 ## Test Reference
 
-`tests/learning/test_14_reporting/test_logging_output.py` checks:
+[`test_logging_output.py`](../../tests/learning/test_14_reporting/test_logging_output.py) checks:
 
 - the request line is logged
 - the response status line is logged
@@ -38,7 +38,7 @@ sequenceDiagram
 
 ## Log Summary Helper
 
-`format_context_for_log()` in `src/utils/reporting.py` turns report context into a compact line:
+`format_context_for_log()` in [`src/utils/reporting.py`](../../src/utils/reporting.py) turns report context into a compact line:
 
 ```text
 GET https://service.test/search -> status=200 request_id=req-search

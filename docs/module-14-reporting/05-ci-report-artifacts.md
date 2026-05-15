@@ -2,7 +2,7 @@
 
 Module 14 updates the GitHub Actions workflow so every CI run can preserve report files.
 
-The workflow file is `.github/workflows/api-tests.yml`.
+The workflow file is [`.github/workflows/api-tests.yml`](../../.github/workflows/api-tests.yml).
 
 ## CI Report Generation
 
@@ -16,7 +16,7 @@ Those args are added to normal and parallel pytest runs.
 
 ## Artifact Upload
 
-The workflow uploads the `reports/` directory:
+The workflow uploads the [`reports/`](../../reports/) directory:
 
 ```yaml
 - name: Upload test reports
@@ -54,9 +54,9 @@ That avoids collisions when the matrix runs Python `3.10` and `3.12`.
 
 ## Why Reports Are Ignored By Git
 
-The repository ignores `reports/` output in `.gitignore`. Reports are generated artifacts, not source code.
+The repository ignores [`reports/`](../../reports/) output in [`.gitignore`](../../.gitignore). Reports are generated artifacts, not source code.
 
-The project keeps only `reports/.gitkeep` so the directory exists in fresh clones.
+The project keeps only [`reports/.gitkeep`](../../reports/.gitkeep) so the directory exists in fresh clones.
 
 ## Key Takeaways
 

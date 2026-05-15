@@ -6,13 +6,13 @@ Module 14 activates the plugin and teaches the result-generation step.
 
 ## Dependency
 
-`allure-pytest` is active in `requirements.txt`:
+`allure-pytest` is active in [`requirements.txt`](../../requirements.txt):
 
 ```text
 allure-pytest==2.13.5
 ```
 
-The plugin is verified in `tests/learning/test_14_reporting/test_reporting_plugins.py`.
+The plugin is verified in [`test_reporting_plugins.py`](../../tests/learning/test_14_reporting/test_reporting_plugins.py).
 
 ## Generate Allure Result Files
 
