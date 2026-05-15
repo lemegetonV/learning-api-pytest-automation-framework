@@ -29,7 +29,7 @@ sequenceDiagram
 
 ## Tests
 
-`tests/dummyjson/test_auth.py` covers:
+[`test_auth.py`](../../tests/dummyjson/test_auth.py) covers:
 
 - login returns user identity and tokens
 - `/auth/me` works with bearer auth
@@ -50,7 +50,7 @@ Auth responses include sensitive fields:
 - `accessToken`
 - `refreshToken`
 
-Module 15 extends `src/utils/reporting.py` so JSON body previews redact token-like fields before they enter logs or reports.
+Module 15 extends [`src/utils/reporting.py`](../../src/utils/reporting.py) so JSON body previews redact token-like fields before they enter logs or reports.
 
 The capstone test `test_login_report_context_redacts_token_body` confirms that live login tokens are not present in `body_preview`.
 

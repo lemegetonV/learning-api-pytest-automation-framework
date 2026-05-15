@@ -1,6 +1,6 @@
 # Module 15: DummyJSON Capstone
 
-Module 15 completes the rebuilt learning path by applying the framework to a realistic API target: DummyJSON. The capstone uses the project architecture built across Modules 1-14 and organizes tests by API domain under `tests/dummyjson/`.
+Module 15 completes the rebuilt learning path by applying the framework to a realistic API target: DummyJSON. The capstone uses the project architecture built across Modules 1-14 and organizes tests by API domain under [`tests/dummyjson/`](../../tests/dummyjson/).
 
 DummyJSON is the capstone target because it has richer API behavior than JSONPlaceholder: JWT-style auth, refresh tokens, search, pagination, categories, nested product objects, carts, users, posts, and comments.
 
@@ -8,15 +8,15 @@ DummyJSON is the capstone target because it has richer API behavior than JSONPla
 
 | Area | Files | Purpose |
 | --- | --- | --- |
-| Capstone fixtures | `tests/dummyjson/conftest.py` | Creates DummyJSON clients, credentials, login data, and authenticated clients |
-| Auth tests | `tests/dummyjson/test_auth.py` | Covers login, bearer auth, refresh tokens, invalid login, and token-safe reporting |
-| Product tests | `tests/dummyjson/test_products.py` | Covers nested products, pagination, search, and categories |
-| User tests | `tests/dummyjson/test_users.py` | Covers user collection, nested profile data, and search |
-| Cart tests | `tests/dummyjson/test_carts.py` | Covers cart schemas, nested products, and total calculations |
-| Posts/comments tests | `tests/dummyjson/test_posts_comments.py` | Covers posts, user filtering, and nested comment user summaries |
-| DummyJSON schemas | `schemas/dummyjson/` | Validates realistic response contracts |
-| CI capstone scope | `.github/workflows/api-tests.yml` | Adds `capstone` workflow scope mapped to `tests/dummyjson` |
-| Reporting safety fix | `src/utils/reporting.py` | Redacts token fields from JSON body previews |
+| Capstone fixtures | [`tests/dummyjson/conftest.py`](../../tests/dummyjson/conftest.py) | Creates DummyJSON clients, credentials, login data, and authenticated clients |
+| Auth tests | [`test_auth.py`](../../tests/dummyjson/test_auth.py) | Covers login, bearer auth, refresh tokens, invalid login, and token-safe reporting |
+| Product tests | [`test_products.py`](../../tests/dummyjson/test_products.py) | Covers nested products, pagination, search, and categories |
+| User tests | [`test_users.py`](../../tests/dummyjson/test_users.py) | Covers user collection, nested profile data, and search |
+| Cart tests | [`test_carts.py`](../../tests/dummyjson/test_carts.py) | Covers cart schemas, nested products, and total calculations |
+| Posts/comments tests | [`test_posts_comments.py`](../../tests/dummyjson/test_posts_comments.py) | Covers posts, user filtering, and nested comment user summaries |
+| DummyJSON schemas | [`schemas/dummyjson/`](../../schemas/dummyjson/) | Validates realistic response contracts |
+| CI capstone scope | [`.github/workflows/api-tests.yml`](../../.github/workflows/api-tests.yml) | Adds `capstone` workflow scope mapped to [`tests/dummyjson`](../../tests/dummyjson/) |
+| Reporting safety fix | [`src/utils/reporting.py`](../../src/utils/reporting.py) | Redacts token fields from JSON body previews |
 
 ## Learning Flow
 
@@ -40,13 +40,14 @@ flowchart TD
 
 | Concept | What you learn | Code reference |
 | --- | --- | --- |
-| Domain organization | Production-style test grouping by API area | `tests/dummyjson/` |
+| Domain organization | Production-style test grouping by API area | [`tests/dummyjson/`](../../tests/dummyjson/) |
 | Auth fixture design | Login once per test need and apply bearer token safely | `authenticated_dummyjson_client` |
 | Refresh token nuance | Validate token pair presence without assuming immediate token rotation | `test_refresh_token_returns_usable_token_pair` |
-| Nested contract validation | Use schemas for realistic nested products, carts, users, posts, and comments | `schemas/dummyjson/` |
-| Search and pagination | Assert metadata and result shape, not brittle exact full payloads | `test_products.py`, `test_users.py` |
+| Nested contract validation | Use schemas for realistic nested products, carts, users, posts, and comments | [`schemas/dummyjson/`](../../schemas/dummyjson/) |
+| Search and pagination | Assert metadata and result shape, not brittle exact full payloads | [`test_products.py`](../../tests/dummyjson/test_products.py), [`test_users.py`](../../tests/dummyjson/test_users.py) |
 | Report safety | Redact token fields from body previews | `test_login_report_context_redacts_token_body` |
-| CI capstone execution | Run the capstone as its own scope | `.github/workflows/api-tests.yml` |
+| CI capstone execution | Run the capstone as its own scope | [`.github/workflows/api-tests.yml`](../../.github/workflows/api-tests.yml) |
+| Checkpoint review | Capstone execution flow, domain boundaries, failure model, and interview review | [`06-checkpoint-deep-dive.md`](06-checkpoint-deep-dive.md) |
 
 ## API References
 
@@ -69,7 +70,7 @@ Module 15 also does not add Docker, database testing, load testing, GraphQL, Kaf
 
 Module 15 is complete when:
 
-- tests are organized under `tests/dummyjson/`.
+- tests are organized under [`tests/dummyjson/`](../../tests/dummyjson/).
 - auth, products, users, carts, posts, and comments are covered.
 - schema validation is applied to realistic nested responses.
 - token responses are not leaked into report context previews.

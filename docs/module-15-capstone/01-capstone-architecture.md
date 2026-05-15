@@ -44,7 +44,7 @@ flowchart TD
 
 ## Shared Fixtures
 
-`tests/dummyjson/conftest.py` introduces:
+[`tests/dummyjson/conftest.py`](../../tests/dummyjson/conftest.py) introduces:
 
 | Fixture | Purpose |
 | --- | --- |
@@ -81,7 +81,7 @@ Module 15 adds:
 capstone -> tests/dummyjson
 ```
 
-to `.github/workflows/api-tests.yml`.
+to [`.github/workflows/api-tests.yml`](../../.github/workflows/api-tests.yml).
 
 This lets CI run the capstone independently from the learning modules when needed.
 

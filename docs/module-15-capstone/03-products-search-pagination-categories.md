@@ -4,7 +4,7 @@ The products domain is the richest DummyJSON area in the capstone. It has nested
 
 ## Product Coverage
 
-`tests/dummyjson/test_products.py` covers:
+[`test_products.py`](../../tests/dummyjson/test_products.py) covers:
 
 | Test | Purpose |
 | --- | --- |

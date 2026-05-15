@@ -4,17 +4,17 @@ The capstone includes multiple API domains so the learner sees how a framework s
 
 ## Users
 
-`tests/dummyjson/test_users.py` covers:
+[`test_users.py`](../../tests/dummyjson/test_users.py) covers:
 
 - user collection schema
 - single user nested profile data
 - search for the public demo user
 
-The single-user test validates nested address and company data using `schemas/dummyjson/user.schema.json`.
+The single-user test validates nested address and company data using [`user.schema.json`](../../schemas/dummyjson/user.schema.json).
 
 ## Carts
 
-`tests/dummyjson/test_carts.py` covers:
+[`test_carts.py`](../../tests/dummyjson/test_carts.py) covers:
 
 - user cart collection schema
 - cart product totals
@@ -33,7 +33,7 @@ flowchart TD
 
 ## Posts And Comments
 
-`tests/dummyjson/test_posts_comments.py` covers:
+[`test_posts_comments.py`](../../tests/dummyjson/test_posts_comments.py) covers:
 
 - post collection schema
 - filtering posts by user id

@@ -4,7 +4,7 @@
 
 DummyJSON supports selecting fields with the `select` query parameter.
 
-Add a test in `tests/dummyjson/test_products.py` that calls:
+Add a test in [`test_products.py`](../../tests/dummyjson/test_products.py) that calls:
 
 ```text
 GET /products?limit=2&select=title,price
@@ -45,21 +45,17 @@ Expected outcome:
 - use `pytest.approx()` for floating point tolerance
 - explain why exact float equality can be brittle
 
-## Exercise 4: Add A Camel Case Request Id Test
+## Exercise 4: Prove Capstone Token Report Safety
 
-Module 14 supports `requestId` in JSON bodies.
+Module 15 login responses contain real token fields, so the capstone must prove reporting stays safe around authenticated flows.
 
-Add a test around `extract_request_id()` using:
-
-```json
-{
-  "requestId": "camel-123"
-}
-```
+Read [`test_auth.py`](../../tests/dummyjson/test_auth.py), then extend the report-context coverage around `POST /auth/login`.
 
 Expected outcome:
 
-- the helper returns `"camel-123"`
+- `build_response_context(response)["body_preview"]` still includes the field names `accessToken` and `refreshToken`
+- the actual token values from `response.json()` do not appear in the body preview
+- you can explain why preserving field names helps debugging while redacting values protects secrets
 
 ## Exercise 5: Add CI Schema Scope Discussion
 
