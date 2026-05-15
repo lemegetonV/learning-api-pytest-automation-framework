@@ -8,12 +8,12 @@ This module uses deterministic helper functions and mocked HTTP examples where t
 
 | Area | Files | Purpose |
 | --- | --- | --- |
-| Performance helpers | `src/utils/performance.py` | Measure one operation, check response-time budgets, and summarize timing samples |
-| Security helpers | `src/utils/security.py` | Redact sensitive headers, detect sensitive query parameters, and check required headers |
-| Response-time tests | `tests/learning/test_12_performance_security/test_response_time_budgets.py` | Shows single-call budget assertions without relying on live API latency |
-| Timing summary tests | `tests/learning/test_12_performance_security/test_timing_summaries.py` | Shows min, average, p95, and max thinking |
-| Security header tests | `tests/learning/test_12_performance_security/test_security_headers.py` | Shows case-insensitive header checks and missing-header reporting |
-| Secret handling tests | `tests/learning/test_12_performance_security/test_secret_handling.py` | Shows redaction and detection of secrets in URLs |
+| Performance helpers | [`src/utils/performance.py`](../../src/utils/performance.py) | Measure one operation, check response-time budgets, and summarize timing samples |
+| Security helpers | [`src/utils/security.py`](../../src/utils/security.py) | Redact sensitive headers, detect sensitive query parameters, and check required headers |
+| Response-time tests | [`test_response_time_budgets.py`](../../tests/learning/test_12_performance_security/test_response_time_budgets.py) | Shows single-call budget assertions without relying on live API latency |
+| Timing summary tests | [`test_timing_summaries.py`](../../tests/learning/test_12_performance_security/test_timing_summaries.py) | Shows min, average, p95, and max thinking |
+| Security header tests | [`test_security_headers.py`](../../tests/learning/test_12_performance_security/test_security_headers.py) | Shows case-insensitive header checks and missing-header reporting |
+| Secret handling tests | [`test_secret_handling.py`](../../tests/learning/test_12_performance_security/test_secret_handling.py) | Shows redaction and detection of secrets in URLs |
 
 ## Learning Flow
 
@@ -35,13 +35,14 @@ flowchart TD
 
 | Concept | What you learn | Code reference |
 | --- | --- | --- |
-| Response-time budget | A threshold used to flag obviously slow API behavior | `is_within_budget()` in `src/utils/performance.py` |
-| Measuring operations | Capturing elapsed time around one callable | `measure_call()` in `src/utils/performance.py` |
-| Timing summary | Reading min, average, p95, and max together | `summarize_timings()` in `src/utils/performance.py` |
-| Percentiles | Why p95 shows tail latency better than average alone | `percentile()` in `src/utils/performance.py` |
-| Security headers | Checking for expected response hardening headers | `missing_security_headers()` in `src/utils/security.py` |
-| Secret redaction | Keeping tokens out of logs and reports | `redact_headers()` in `src/utils/security.py` |
-| URL secret detection | Finding risky query parameters such as `access_token` | `find_sensitive_query_params()` in `src/utils/security.py` |
+| Response-time budget | A threshold used to flag obviously slow API behavior | `is_within_budget()` in [`src/utils/performance.py`](../../src/utils/performance.py) |
+| Measuring operations | Capturing elapsed time around one callable | `measure_call()` in [`src/utils/performance.py`](../../src/utils/performance.py) |
+| Timing summary | Reading min, average, p95, and max together | `summarize_timings()` in [`src/utils/performance.py`](../../src/utils/performance.py) |
+| Percentiles | Why p95 shows tail latency better than average alone | `percentile()` in [`src/utils/performance.py`](../../src/utils/performance.py) |
+| Security headers | Checking for expected response hardening headers | `missing_security_headers()` in [`src/utils/security.py`](../../src/utils/security.py) |
+| Secret redaction | Keeping tokens out of logs and reports | `redact_headers()` in [`src/utils/security.py`](../../src/utils/security.py) |
+| URL secret detection | Finding risky query parameters such as `access_token` | `find_sensitive_query_params()` in [`src/utils/security.py`](../../src/utils/security.py) |
+| Checkpoint review | Helper flow, responsibility boundaries, failure model, and interview review | [`06-checkpoint-deep-dive.md`](06-checkpoint-deep-dive.md) |
 
 ## Module Boundary
 
@@ -103,8 +104,8 @@ Module 13 will discuss CI placement. Module 14 will connect logs and reporting t
 
 Module 12 is complete when:
 
-- `src/utils/performance.py` contains small, tested timing helpers.
-- `src/utils/security.py` contains small, tested security smoke-check helpers.
+- [`src/utils/performance.py`](../../src/utils/performance.py) contains small, tested timing helpers.
+- [`src/utils/security.py`](../../src/utils/security.py) contains small, tested security smoke-check helpers.
 - tests use `@pytest.mark.performance` and `@pytest.mark.security` where appropriate.
 - timing tests avoid flaky live-network thresholds.
 - security tests explain header checks, secret redaction, and URL token risk.

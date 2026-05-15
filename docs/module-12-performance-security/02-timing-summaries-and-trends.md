@@ -20,13 +20,13 @@ If most calls are fast but one call is very slow, the average can hide that pain
 
 ## Code Walkthrough
 
-The helper in `src/utils/performance.py` summarizes a list of elapsed milliseconds:
+The helper in [`src/utils/performance.py`](../../src/utils/performance.py) summarizes a list of elapsed milliseconds:
 
 ```python
 summary = summarize_timings([120, 180, 200, 300, 500])
 ```
 
-Expected result from `tests/learning/test_12_performance_security/test_timing_summaries.py`:
+Expected result from [`test_timing_summaries.py`](../../tests/learning/test_12_performance_security/test_timing_summaries.py):
 
 ```python
 {

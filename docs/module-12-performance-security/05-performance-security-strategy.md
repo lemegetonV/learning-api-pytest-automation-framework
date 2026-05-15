@@ -30,7 +30,7 @@ flowchart TD
 
 ## Test Selection
 
-Module 12 uses existing markers from `pyproject.toml`:
+Module 12 uses existing markers from [`pyproject.toml`](../../pyproject.toml):
 
 ```text
 performance: response-time checks

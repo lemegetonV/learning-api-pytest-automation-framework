@@ -18,13 +18,13 @@ flowchart TD
 
 ## Security Header Checks
 
-The helper in `src/utils/security.py` checks headers case-insensitively:
+The helper in [`src/utils/security.py`](../../src/utils/security.py) checks headers case-insensitively:
 
 ```python
 has_header(headers, "Content-Security-Policy")
 ```
 
-The learning tests in `tests/learning/test_12_performance_security/test_security_headers.py` use this required-header list:
+The learning tests in [`test_security_headers.py`](../../tests/learning/test_12_performance_security/test_security_headers.py) use this required-header list:
 
 ```python
 REQUIRED_BROWSER_SECURITY_HEADERS = [

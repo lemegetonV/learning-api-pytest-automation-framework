@@ -20,7 +20,7 @@ flowchart TD
 
 ## Detecting Secrets In URLs
 
-`find_sensitive_query_params()` lives in `src/utils/security.py`.
+`find_sensitive_query_params()` lives in [`src/utils/security.py`](../../src/utils/security.py).
 
 It detects query parameter names such as:
 
@@ -31,7 +31,7 @@ It detects query parameter names such as:
 - `secret`
 - `token`
 
-The test in `tests/learning/test_12_performance_security/test_secret_handling.py` shows the pattern:
+The test in [`test_secret_handling.py`](../../tests/learning/test_12_performance_security/test_secret_handling.py) shows the pattern:
 
 ```python
 url = "https://service.test/search?query=python&access_token=secret&user=42"

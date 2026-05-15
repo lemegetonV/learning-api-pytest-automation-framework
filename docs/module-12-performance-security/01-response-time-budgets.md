@@ -16,7 +16,7 @@ flowchart TD
 
 ## Code Walkthrough
 
-The budget helper lives in `src/utils/performance.py`:
+The budget helper lives in [`src/utils/performance.py`](../../src/utils/performance.py):
 
 ```python
 def is_within_budget(elapsed_ms: float, budget_ms: float) -> bool:
@@ -25,7 +25,7 @@ def is_within_budget(elapsed_ms: float, budget_ms: float) -> bool:
     return elapsed_ms <= budget_ms
 ```
 
-The learning test is in `tests/learning/test_12_performance_security/test_response_time_budgets.py`:
+The learning test is in [`test_response_time_budgets.py`](../../tests/learning/test_12_performance_security/test_response_time_budgets.py):
 
 ```python
 assert is_within_budget(elapsed_ms=120, budget_ms=250) is True

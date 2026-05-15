@@ -2,7 +2,7 @@
 
 ## Exercise 1: Add A New Budget Case
 
-Open `tests/learning/test_12_performance_security/test_response_time_budgets.py`.
+Open [`test_response_time_budgets.py`](../../tests/learning/test_12_performance_security/test_response_time_budgets.py).
 
 Add one assertion where:
 
@@ -45,21 +45,26 @@ Expected outcome:
 
 - you can explain why average alone is incomplete
 
-## Exercise 4: Add A Sensitive Query Parameter
+## Exercise 4: Use A Custom Sensitive Query Parameter
 
-Open `src/utils/security.py`.
+Add a test in [`test_secret_handling.py`](../../tests/learning/test_12_performance_security/test_secret_handling.py) that calls `find_sensitive_query_params()` with a custom sensitive-name set.
 
-Add `session_id` to the default sensitive query parameter names.
-
-Then add a test in `test_secret_handling.py` using:
+Use this URL:
 
 ```text
 https://service.test/profile?session_id=abc123
 ```
 
+Pass this custom configuration:
+
+```python
+sensitive_names={"session_id"}
+```
+
 Expected outcome:
 
 - `find_sensitive_query_params()` returns `["session_id"]`
+- the framework code does not need to change just because one project has an extra sensitive parameter name
 
 ## Exercise 5: Add A Custom Redaction Case
 
