@@ -47,10 +47,10 @@ For every auth mechanism, ask:
 
 ## Code References
 
-- `src/api_client/client.py`
-- `tests/conftest.py`
-- `tests/learning/test_08_auth/test_basic_auth.py`
-- `tests/learning/test_08_auth/test_bearer_and_api_keys.py`
+- [`src/api_client/client.py`](../../src/api_client/client.py)
+- [`tests/conftest.py`](../../tests/conftest.py)
+- [`test_basic_auth.py`](../../tests/learning/test_08_auth/test_basic_auth.py)
+- [`test_bearer_and_api_keys.py`](../../tests/learning/test_08_auth/test_bearer_and_api_keys.py)
 
 ## Key Takeaways
 

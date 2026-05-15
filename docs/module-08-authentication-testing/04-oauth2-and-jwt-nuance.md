@@ -57,7 +57,7 @@ The Module 15 DummyJSON capstone can add more realistic JWT-style examples:
 - login request returns token-like values
 - authenticated user endpoint requires a valid token
 - refresh-token behavior is validated
-- tests are organized by auth domain under `tests/dummyjson/`
+- tests are organized by auth domain under [`tests/dummyjson/`](../../tests/dummyjson/)
 
 If a future project uses a real OAuth2 provider, keep credentials and client secrets outside git, usually through CI secrets or a local `.env` file.
 

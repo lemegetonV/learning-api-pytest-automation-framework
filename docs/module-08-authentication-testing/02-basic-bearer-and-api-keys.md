@@ -11,14 +11,14 @@ client.set_basic_auth("learner", "secret")
 response = client.get("/basic-auth/learner/secret")
 ```
 
-The helper lives in `src/api_client/client.py`:
+The helper lives in [`src/api_client/client.py`](../../src/api_client/client.py):
 
 ```python
 def set_basic_auth(self, username: str, password: str) -> None:
     self.session.auth = (username, password)
 ```
 
-The tests live in `tests/learning/test_08_auth/test_basic_auth.py`.
+The tests live in [`test_basic_auth.py`](../../tests/learning/test_08_auth/test_basic_auth.py).
 
 | Test | Purpose |
 | --- | --- |
@@ -40,7 +40,7 @@ def set_bearer_token(self, token: str) -> None:
     self.session.headers["Authorization"] = f"Bearer {token}"
 ```
 
-The tests in `tests/learning/test_08_auth/test_bearer_and_api_keys.py` verify both success and missing-token failure.
+The tests in [`test_bearer_and_api_keys.py`](../../tests/learning/test_08_auth/test_bearer_and_api_keys.py) verify both success and missing-token failure.
 
 ## API Keys
 
@@ -66,10 +66,10 @@ That creates duplication and makes cleanup easy to forget. `APIClient.clear_auth
 
 ## Code References
 
-- `src/api_client/client.py`
-- `tests/learning/test_08_auth/test_auth_helpers.py`
-- `tests/learning/test_08_auth/test_basic_auth.py`
-- `tests/learning/test_08_auth/test_bearer_and_api_keys.py`
+- [`src/api_client/client.py`](../../src/api_client/client.py)
+- [`test_auth_helpers.py`](../../tests/learning/test_08_auth/test_auth_helpers.py)
+- [`test_basic_auth.py`](../../tests/learning/test_08_auth/test_basic_auth.py)
+- [`test_bearer_and_api_keys.py`](../../tests/learning/test_08_auth/test_bearer_and_api_keys.py)
 
 ## Key Takeaways
 

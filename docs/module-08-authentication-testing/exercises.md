@@ -34,7 +34,7 @@ Hint: use the `httpbin_client` fixture.
 
 ## Exercise 3: Compare API Key Placement
 
-Read `tests/learning/test_08_auth/test_bearer_and_api_keys.py`.
+Read [`test_bearer_and_api_keys.py`](../../tests/learning/test_08_auth/test_bearer_and_api_keys.py).
 
 Answer:
 
@@ -44,7 +44,7 @@ Answer:
 
 ## Exercise 4: Prove Cookie Isolation
 
-Create a new test in `tests/learning/test_08_auth/test_cookies_and_sessions.py`.
+Create a new test in [`test_cookies_and_sessions.py`](../../tests/learning/test_08_auth/test_cookies_and_sessions.py).
 
 Steps:
 
@@ -59,7 +59,7 @@ Expected outcome:
 
 ## Exercise 5: Explain OAuth2 In One Paragraph
 
-Read `04-oauth2-and-jwt-nuance.md`.
+Read [`04-oauth2-and-jwt-nuance.md`](04-oauth2-and-jwt-nuance.md).
 
 Write a short paragraph that includes these words correctly:
 

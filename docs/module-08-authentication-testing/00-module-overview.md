@@ -8,9 +8,9 @@ The module uses `httpbin` because JSONPlaceholder is intentionally public and do
 
 | Area | Files | Purpose |
 | --- | --- | --- |
-| Client auth helpers | `src/api_client/client.py` | Central methods for Basic auth, Bearer auth, and auth cleanup |
-| Auth fixture | `tests/conftest.py` | Function-scoped `httpbin_client` for isolated auth and cookie examples |
-| Auth tests | `tests/learning/test_08_auth/` | Executable examples for Basic auth, Bearer tokens, API keys, cookies, and sessions |
+| Client auth helpers | [`src/api_client/client.py`](../../src/api_client/client.py) | Central methods for Basic auth, Bearer auth, and auth cleanup |
+| Auth fixture | [`tests/conftest.py`](../../tests/conftest.py) | Function-scoped `httpbin_client` for isolated auth and cookie examples |
+| Auth tests | [`tests/learning/test_08_auth/`](../../tests/learning/test_08_auth/) | Executable examples for Basic auth, Bearer tokens, API keys, cookies, and sessions |
 | Learning docs | `docs/module-08-authentication-testing/` | Concept guides linked to the implementation |
 
 ## Learning Flow
@@ -32,12 +32,13 @@ flowchart TD
 
 | Concept | What you learn | Code reference |
 | --- | --- | --- |
-| Basic auth | Credentials are sent through the HTTP auth mechanism | `tests/learning/test_08_auth/test_basic_auth.py` |
-| Bearer token | Tokens are sent in the `Authorization` header | `tests/learning/test_08_auth/test_bearer_and_api_keys.py` |
-| API keys | Query keys vs header keys and why URLs are risky | `tests/learning/test_08_auth/test_bearer_and_api_keys.py` |
-| Cookies | Server-set cookies are stored by `requests.Session` | `tests/learning/test_08_auth/test_cookies_and_sessions.py` |
-| Session isolation | Function-scoped clients prevent credential leakage | `tests/conftest.py` |
-| OAuth2 nuance | OAuth2 is a delegated authorization framework, not just a token string | `04-oauth2-and-jwt-nuance.md` |
+| Basic auth | Credentials are sent through the HTTP auth mechanism | [`test_basic_auth.py`](../../tests/learning/test_08_auth/test_basic_auth.py) |
+| Bearer token | Tokens are sent in the `Authorization` header | [`test_bearer_and_api_keys.py`](../../tests/learning/test_08_auth/test_bearer_and_api_keys.py) |
+| API keys | Query keys vs header keys and why URLs are risky | [`test_bearer_and_api_keys.py`](../../tests/learning/test_08_auth/test_bearer_and_api_keys.py) |
+| Cookies | Server-set cookies are stored by `requests.Session` | [`test_cookies_and_sessions.py`](../../tests/learning/test_08_auth/test_cookies_and_sessions.py) |
+| Session isolation | Function-scoped clients prevent credential leakage | [`tests/conftest.py`](../../tests/conftest.py) |
+| OAuth2 nuance | OAuth2 is a delegated authorization framework, not just a token string | [`04-oauth2-and-jwt-nuance.md`](04-oauth2-and-jwt-nuance.md) |
+| Checkpoint review | Auth execution flow, isolation rules, failure model, and interview readiness | [`05-checkpoint-deep-dive.md`](05-checkpoint-deep-dive.md) |
 
 ## Test Target
 

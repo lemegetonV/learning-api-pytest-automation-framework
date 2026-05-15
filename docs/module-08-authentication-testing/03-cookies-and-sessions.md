@@ -50,7 +50,7 @@ Module 08 tests both:
 
 Cookies are state. State can leak between tests.
 
-That is why `httpbin_client` in `tests/conftest.py` is function-scoped:
+That is why `httpbin_client` in [`tests/conftest.py`](../../tests/conftest.py) is function-scoped:
 
 ```python
 @pytest.fixture
@@ -62,9 +62,9 @@ Each auth test gets a fresh client, fresh session headers, fresh session auth, a
 
 ## Code References
 
-- `tests/conftest.py`
-- `src/api_client/client.py`
-- `tests/learning/test_08_auth/test_cookies_and_sessions.py`
+- [`tests/conftest.py`](../../tests/conftest.py)
+- [`src/api_client/client.py`](../../src/api_client/client.py)
+- [`test_cookies_and_sessions.py`](../../tests/learning/test_08_auth/test_cookies_and_sessions.py)
 
 ## Key Takeaways
 
