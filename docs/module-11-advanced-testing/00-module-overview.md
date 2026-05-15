@@ -8,11 +8,11 @@ The module activates `responses`, a mocking library for `requests`, so the frame
 
 | Area | Files | Purpose |
 | --- | --- | --- |
-| Mocking dependency | `requirements.txt` | Activates `responses` |
-| Mocked error tests | `tests/learning/test_11_advanced/test_mocked_error_paths.py` | Simulates `500` errors and timeout exceptions |
-| Flaky API examples | `tests/learning/test_11_advanced/test_flaky_api_patterns.py` | Reproduces transient failure and recovery deterministically |
-| Version compatibility tests | `tests/learning/test_11_advanced/test_version_compatibility.py` | Checks additive vs breaking API changes |
-| Contract boundary tests | `tests/learning/test_11_advanced/test_contract_boundaries.py` | Explains consumer contracts vs provider schemas |
+| Mocking dependency | [`requirements.txt`](../../requirements.txt) | Activates `responses` |
+| Mocked error tests | [`test_mocked_error_paths.py`](../../tests/learning/test_11_advanced/test_mocked_error_paths.py) | Simulates `500` errors and timeout exceptions |
+| Flaky API examples | [`test_flaky_api_patterns.py`](../../tests/learning/test_11_advanced/test_flaky_api_patterns.py) | Reproduces transient failure and recovery deterministically |
+| Version compatibility tests | [`test_version_compatibility.py`](../../tests/learning/test_11_advanced/test_version_compatibility.py) | Checks additive vs breaking API changes |
+| Contract boundary tests | [`test_contract_boundaries.py`](../../tests/learning/test_11_advanced/test_contract_boundaries.py) | Explains consumer contracts vs provider schemas |
 
 ## Learning Flow
 
@@ -32,12 +32,13 @@ flowchart TD
 
 | Concept | What you learn | Code reference |
 | --- | --- | --- |
-| Mocked HTTP | Simulate API responses without real network dependency | `test_mocked_error_paths.py` |
+| Mocked HTTP | Simulate API responses without real network dependency | [`test_mocked_error_paths.py`](../../tests/learning/test_11_advanced/test_mocked_error_paths.py) |
 | Timeout testing | Exercise exceptions without slowing the suite | `test_timeout_exception_can_be_exercised_without_waiting` |
-| Flaky API handling | Reproduce transient failure then recovery | `test_flaky_api_patterns.py` |
+| Flaky API handling | Reproduce transient failure then recovery | [`test_flaky_api_patterns.py`](../../tests/learning/test_11_advanced/test_flaky_api_patterns.py) |
 | Retryable status thinking | Classify transient statuses before adding retry logic | `is_retryable_status()` |
-| API version compatibility | Additive changes should not break stable consumers | `test_version_compatibility.py` |
-| Consumer contracts | Validate fields the client depends on | `test_contract_boundaries.py` |
+| API version compatibility | Additive changes should not break stable consumers | [`test_version_compatibility.py`](../../tests/learning/test_11_advanced/test_version_compatibility.py) |
+| Consumer contracts | Validate fields the client depends on | [`test_contract_boundaries.py`](../../tests/learning/test_11_advanced/test_contract_boundaries.py) |
+| Checkpoint review | Mock execution flow, flaky failure model, compatibility boundaries, and interview review | [`06-checkpoint-deep-dive.md`](06-checkpoint-deep-dive.md) |
 
 ## What Is Intentionally Deferred
 
@@ -49,7 +50,7 @@ Module 11 also does not introduce a full contract-testing broker such as Pact. I
 
 Module 11 is complete when:
 
-- `responses` is active in `requirements.txt`.
+- `responses` is active in [`requirements.txt`](../../requirements.txt).
 - tests simulate structured server errors and timeouts.
 - tests reproduce transient failure then recovery.
 - tests explain retryable vs non-retryable status codes.

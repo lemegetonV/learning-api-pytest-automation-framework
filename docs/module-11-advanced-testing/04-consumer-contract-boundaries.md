@@ -13,7 +13,7 @@ Consumer contracts focus on what this client depends on.
 
 ## Error Response Example
 
-`test_contract_boundaries.py` defines:
+[`test_contract_boundaries.py`](../../tests/learning/test_11_advanced/test_contract_boundaries.py) defines:
 
 ```python
 ERROR_CONTRACT_SCHEMA = {
@@ -63,8 +63,8 @@ Consumer contracts do not replace provider tests. Provider tests should still va
 
 ## Code References
 
-- `tests/learning/test_11_advanced/test_contract_boundaries.py`
-- `tests/learning/test_10_schema/test_response_schemas.py`
+- [`test_contract_boundaries.py`](../../tests/learning/test_11_advanced/test_contract_boundaries.py)
+- [`test_response_schemas.py`](../../tests/learning/test_10_schema/test_response_schemas.py)
 
 ## Key Takeaways
 

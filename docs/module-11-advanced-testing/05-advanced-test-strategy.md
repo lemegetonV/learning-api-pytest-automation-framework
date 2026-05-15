@@ -59,8 +59,8 @@ The learner now has patterns for tests that should not depend on live API behavi
 
 ## Code References
 
-- `tests/learning/test_11_advanced/`
-- `requirements.txt`
+- [`tests/learning/test_11_advanced/`](../../tests/learning/test_11_advanced/)
+- [`requirements.txt`](../../requirements.txt)
 
 ## Key Takeaways
 

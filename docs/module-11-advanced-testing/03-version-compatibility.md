@@ -17,7 +17,7 @@ Module 11 models version compatibility with mocked v1 and v2 user responses.
 
 ## Compatible Consumer Schema
 
-`test_version_compatibility.py` defines the fields this consumer needs:
+[`test_version_compatibility.py`](../../tests/learning/test_11_advanced/test_version_compatibility.py) defines the fields this consumer needs:
 
 ```python
 USER_SUMMARY_COMPATIBLE_SCHEMA = {
@@ -57,8 +57,8 @@ Both responses must satisfy the same consumer contract. That proves the v2 respo
 
 ## Code References
 
-- `tests/learning/test_11_advanced/test_version_compatibility.py`
-- `src/utils/schema_validator.py`
+- [`test_version_compatibility.py`](../../tests/learning/test_11_advanced/test_version_compatibility.py)
+- [`src/utils/schema_validator.py`](../../src/utils/schema_validator.py)
 
 ## Key Takeaways
 

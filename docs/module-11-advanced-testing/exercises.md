@@ -2,7 +2,7 @@
 
 ## Exercise 1: Mock A 401 Response
 
-Create a test in `tests/learning/test_11_advanced/test_mocked_error_paths.py`.
+Create a test in [`test_mocked_error_paths.py`](../../tests/learning/test_11_advanced/test_mocked_error_paths.py).
 
 Mock:
 
@@ -27,7 +27,7 @@ Expected assertions:
 
 ## Exercise 2: Add A Retryable Status
 
-Read `is_retryable_status()` in `test_flaky_api_patterns.py`.
+Read `is_retryable_status()` in [`test_flaky_api_patterns.py`](../../tests/learning/test_11_advanced/test_flaky_api_patterns.py).
 
 Answer:
 
@@ -51,7 +51,7 @@ Expected outcome:
 
 ## Exercise 4: Add A Breaking Version Case
 
-In `test_version_compatibility.py`, create a response where:
+In [`test_version_compatibility.py`](../../tests/learning/test_11_advanced/test_version_compatibility.py), create a response where:
 
 - `id` is still an integer
 - `name` exists

@@ -70,9 +70,9 @@ That is why this project keeps both:
 
 ## Code References
 
-- `requirements.txt`
-- `tests/learning/test_11_advanced/test_mocked_error_paths.py`
-- `src/api_client/client.py`
+- [`requirements.txt`](../../requirements.txt)
+- [`test_mocked_error_paths.py`](../../tests/learning/test_11_advanced/test_mocked_error_paths.py)
+- [`src/api_client/client.py`](../../src/api_client/client.py)
 
 ## Key Takeaways
 

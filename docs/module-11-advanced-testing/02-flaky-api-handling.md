@@ -17,7 +17,7 @@ Module 11 does not add retry logic to `APIClient`. It first teaches how to repro
 
 ## Retryable Status Codes
 
-`tests/learning/test_11_advanced/test_flaky_api_patterns.py` includes a small classifier:
+[`test_flaky_api_patterns.py`](../../tests/learning/test_11_advanced/test_flaky_api_patterns.py) includes a small classifier:
 
 ```python
 def is_retryable_status(status_code: int) -> bool:
@@ -63,7 +63,7 @@ Those concerns belong in framework policy. Module 11 stays focused on determinis
 
 ## Code References
 
-- `tests/learning/test_11_advanced/test_flaky_api_patterns.py`
+- [`test_flaky_api_patterns.py`](../../tests/learning/test_11_advanced/test_flaky_api_patterns.py)
 
 ## Key Takeaways
 
