@@ -2,7 +2,7 @@
 
 ## Exercise 1: Read The Workflow
 
-Open `.github/workflows/api-tests.yml`.
+Open [`.github/workflows/api-tests.yml`](../../.github/workflows/api-tests.yml).
 
 Answer:
 
@@ -61,7 +61,7 @@ Expected outcome:
 
 ## Exercise 5: Explain The Config Isolation Finding
 
-Read `tests/learning/test_07_framework/test_config.py`.
+Read [`test_config.py`](../../tests/learning/test_07_framework/test_config.py).
 
 Answer:
 
@@ -77,7 +77,7 @@ Expected outcome:
 
 For each situation, choose `full`, `smoke`, `performance`, or `security`:
 
-1. A pull request changes `src/api_client/client.py`.
+1. A pull request changes [`src/api_client/client.py`](../../src/api_client/client.py).
 2. A developer wants a quick health check after JSONPlaceholder was unavailable.
 3. A tester is investigating response-time budget examples.
 4. A tester is checking token redaction behavior.

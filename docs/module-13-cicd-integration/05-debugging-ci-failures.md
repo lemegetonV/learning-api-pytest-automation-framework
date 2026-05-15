@@ -30,9 +30,9 @@ This separation matters. A compile failure is not debugged the same way as an as
 
 | Symptom | Likely area | First check |
 | --- | --- | --- |
-| Dependency cannot install | Requirements or Python version | `requirements.txt`, matrix version |
+| Dependency cannot install | Requirements or Python version | [`requirements.txt`](../../requirements.txt), matrix version |
 | Syntax error | Python file changed | compileall output |
-| Marker not found warning | Pytest config | `pyproject.toml` marker list |
+| Marker not found warning | Pytest config | [`pyproject.toml`](../../pyproject.toml) marker list |
 | Default config assertion fails | Environment isolation | `monkeypatch.delenv()` setup |
 | Live API status differs | Public API behavior | rerun locally and inspect response |
 | Parallel-only failure | Test isolation | shared state, order dependence, file writes |

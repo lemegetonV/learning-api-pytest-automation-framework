@@ -4,7 +4,7 @@ CI does not always need to run every test in every situation. Module 13 uses pyt
 
 ## Marker Strategy
 
-Markers are declared in `pyproject.toml`:
+Markers are declared in [`pyproject.toml`](../../pyproject.toml):
 
 ```toml
 markers = [
@@ -55,7 +55,7 @@ Markers are powerful, but they can hide coverage if used carelessly.
 Common mistakes:
 
 - marking too many tests as smoke
-- forgetting to register markers in `pyproject.toml`
+- forgetting to register markers in [`pyproject.toml`](../../pyproject.toml)
 - relying on marker-only CI for merge confidence
 - using performance markers with unstable live thresholds
 - treating security markers as a full security audit

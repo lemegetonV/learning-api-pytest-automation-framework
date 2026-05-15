@@ -1,6 +1,6 @@
 # GitHub Actions Workflow
 
-The Module 13 workflow lives at `.github/workflows/api-tests.yml`. It is the first real CI entry point for the project.
+The Module 13 workflow lives at [`.github/workflows/api-tests.yml`](../../.github/workflows/api-tests.yml). It is the first real CI entry point for the project.
 
 ## Workflow Triggers
 
@@ -37,7 +37,7 @@ flowchart TD
     F -->|Yes| H["python -m pytest target -n auto"]
 ```
 
-The important principle is that CI does not rely on your local virtual environment. It creates a new environment and installs dependencies from `requirements.txt`.
+The important principle is that CI does not rely on your local virtual environment. It creates a new environment and installs dependencies from [`requirements.txt`](../../requirements.txt).
 
 ## Python Matrix
 
@@ -45,7 +45,7 @@ The workflow runs on Python `3.10` and `3.12`.
 
 This gives useful coverage because:
 
-- `3.10` is the minimum supported version in `pyproject.toml`
+- `3.10` is the minimum supported version in [`pyproject.toml`](../../pyproject.toml)
 - `3.12` represents a newer stable Python version
 - the matrix catches compatibility issues earlier than one local version can
 
@@ -76,7 +76,7 @@ This catches syntax errors across source and test files before pytest selection 
 
 ## Workflow Contract Tests
 
-`tests/learning/test_13_cicd/test_ci_workflow_contract.py` checks the workflow for required behavior:
+[`test_ci_workflow_contract.py`](../../tests/learning/test_13_cicd/test_ci_workflow_contract.py) checks the workflow for required behavior:
 
 - workflow file exists
 - workflow has push, pull request, and manual triggers

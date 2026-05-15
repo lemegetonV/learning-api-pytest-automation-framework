@@ -2,7 +2,7 @@
 
 Module 13 activates `pytest-xdist` for optional parallel execution.
 
-The dependency is active in `requirements.txt`:
+The dependency is active in [`requirements.txt`](../../requirements.txt):
 
 ```text
 pytest-xdist==3.6.1
@@ -56,7 +56,7 @@ Good parallel-friendly tests:
 
 ## Config Test Reliability
 
-The review finding about `tests/learning/test_07_framework/test_config.py` is a CI reliability issue.
+The review finding about [`test_config.py`](../../tests/learning/test_07_framework/test_config.py) is a CI reliability issue.
 
 Default-value tests must clear environment variables before asserting defaults because CI sets environment variables intentionally. The current tests use `clear_settings_environment(monkeypatch)` before default assertions, which keeps those tests deterministic.
 

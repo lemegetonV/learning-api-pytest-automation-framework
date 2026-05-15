@@ -55,7 +55,7 @@ These are different test goals:
 | Overrides | Set specific env vars with `monkeypatch.setenv()` |
 | Invalid env value | Set one invalid env var and assert failure |
 
-That is why `tests/learning/test_07_framework/test_config.py` clears config variables before default assertions.
+That is why [`test_config.py`](../../tests/learning/test_07_framework/test_config.py) clears config variables before default assertions.
 
 ## Public API Risk
 

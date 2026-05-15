@@ -2,15 +2,15 @@
 
 Module 13 moves the framework from local-only execution to repeatable CI execution with GitHub Actions. It teaches how a test automation project decides what to run automatically, what to make selectable, how to keep environment-dependent tests stable, and how optional parallel execution fits into the strategy.
 
-The module adds a real workflow at `.github/workflows/api-tests.yml` and tests that treat the workflow as project configuration.
+The module adds a real workflow at [`.github/workflows/api-tests.yml`](../../.github/workflows/api-tests.yml) and tests that treat the workflow as project configuration.
 
 ## What This Module Builds
 
 | Area | Files | Purpose |
 | --- | --- | --- |
-| GitHub Actions workflow | `.github/workflows/api-tests.yml` | Runs install, syntax checks, and pytest in CI |
-| Parallel dependency | `requirements.txt` | Activates `pytest-xdist` for optional parallel execution |
-| CI contract tests | `tests/learning/test_13_cicd/test_ci_workflow_contract.py` | Verifies workflow triggers, quality gates, markers, and xdist strategy |
+| GitHub Actions workflow | [`.github/workflows/api-tests.yml`](../../.github/workflows/api-tests.yml) | Runs install, syntax checks, and pytest in CI |
+| Parallel dependency | [`requirements.txt`](../../requirements.txt) | Activates `pytest-xdist` for optional parallel execution |
+| CI contract tests | [`test_ci_workflow_contract.py`](../../tests/learning/test_13_cicd/test_ci_workflow_contract.py) | Verifies workflow triggers, quality gates, markers, and xdist strategy |
 | Learning docs | `docs/module-13-cicd-integration/` | Explains CI flow, test selection, reliability, and debugging |
 
 ## Learning Flow
@@ -33,13 +33,14 @@ flowchart TD
 
 | Concept | What you learn | Code reference |
 | --- | --- | --- |
-| CI workflow triggers | Running on push, pull request, and manual dispatch | `.github/workflows/api-tests.yml` |
-| Dependency installation | Rebuilding the environment from `requirements.txt` | `Install dependencies` step |
+| CI workflow triggers | Running on push, pull request, and manual dispatch | [`.github/workflows/api-tests.yml`](../../.github/workflows/api-tests.yml) |
+| Dependency installation | Rebuilding the environment from [`requirements.txt`](../../requirements.txt) | `Install dependencies` step |
 | Quality gates | Syntax check before pytest | `python -m compileall -q src tests` |
 | Marker-based selection | Running `full`, `smoke`, `performance`, or `security` scopes | `TEST_SCOPE` in the workflow |
 | Optional parallel execution | Running pytest with `-n auto` only when requested | `PARALLEL` in the workflow |
-| Workflow contract testing | Testing CI configuration with pytest | `test_ci_workflow_contract.py` |
-| CI reliability | Isolating config tests from real environment variables | `tests/learning/test_07_framework/test_config.py` |
+| Workflow contract testing | Testing CI configuration with pytest | [`test_ci_workflow_contract.py`](../../tests/learning/test_13_cicd/test_ci_workflow_contract.py) |
+| CI reliability | Isolating config tests from real environment variables | [`test_config.py`](../../tests/learning/test_07_framework/test_config.py) |
+| Checkpoint review | Workflow execution flow, marker strategy, failure model, and interview review | [`06-checkpoint-deep-dive.md`](06-checkpoint-deep-dive.md) |
 
 ## CI Pipeline Shape
 
@@ -69,8 +70,8 @@ Module 13 also does not add Dockerized execution, deployment pipelines, environm
 
 Module 13 is complete when:
 
-- `.github/workflows/api-tests.yml` runs on push, pull request, and manual dispatch.
-- CI installs from `requirements.txt`.
+- [`.github/workflows/api-tests.yml`](../../.github/workflows/api-tests.yml) runs on push, pull request, and manual dispatch.
+- CI installs from [`requirements.txt`](../../requirements.txt).
 - CI runs `python -m compileall -q src tests` before pytest.
 - CI can run full, smoke, performance, and security scopes.
 - `pytest-xdist` is active for optional parallel execution.
