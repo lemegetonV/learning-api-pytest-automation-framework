@@ -21,10 +21,10 @@ flowchart LR
 
 | Area | Project file | Why it matters |
 | --- | --- | --- |
-| Create tests | `tests/learning/test_05_crud/test_create.py` | Sends JSON request bodies with `POST` |
-| Update tests | `tests/learning/test_05_crud/test_update.py` | Compares `PUT` full replacement and `PATCH` partial update |
-| Delete tests | `tests/learning/test_05_crud/test_delete.py` | Tests delete responses and simulated deletion behavior |
-| Lifecycle tests | `tests/learning/test_05_crud/test_crud_lifecycle.py` | Demonstrates request chaining across CRUD steps |
+| Create tests | [`test_create.py`](../../tests/learning/test_05_crud/test_create.py) | Sends JSON request bodies with `POST` |
+| Update tests | [`test_update.py`](../../tests/learning/test_05_crud/test_update.py) | Compares `PUT` full replacement and `PATCH` partial update |
+| Delete tests | [`test_delete.py`](../../tests/learning/test_05_crud/test_delete.py) | Tests delete responses and simulated deletion behavior |
+| Lifecycle tests | [`test_crud_lifecycle.py`](../../tests/learning/test_05_crud/test_crud_lifecycle.py) | Demonstrates request chaining across CRUD steps |
 | Learning docs | `docs/module-05-crud-operations/` | Explains write-method behavior and JSONPlaceholder limitations |
 
 ## Important: JSONPlaceholder Simulates Writes
@@ -60,11 +60,12 @@ In a real API, the same patterns would also verify persistence by reading back c
 
 Read in this order:
 
-1. `01-post-create-requests.md`
-2. `02-put-and-patch-updates.md`
-3. `03-delete-requests.md`
-4. `04-crud-lifecycle-and-test-isolation.md`
-5. `exercises.md`
+1. [`01-post-create-requests.md`](01-post-create-requests.md)
+2. [`02-put-and-patch-updates.md`](02-put-and-patch-updates.md)
+3. [`03-delete-requests.md`](03-delete-requests.md)
+4. [`04-crud-lifecycle-and-test-isolation.md`](04-crud-lifecycle-and-test-isolation.md)
+5. [`05-checkpoint-deep-dive.md`](05-checkpoint-deep-dive.md)
+6. [`exercises.md`](exercises.md)
 
 ## What You Should Be Able To Do
 
@@ -97,9 +98,8 @@ Those arrive in later modules after the raw HTTP method patterns are clear.
 Module 05 is complete when:
 
 - All docs in `docs/module-05-crud-operations/` exist.
-- CRUD tests exist under `tests/learning/test_05_crud/`.
+- CRUD tests exist under [`tests/learning/test_05_crud/`](../../tests/learning/test_05_crud/).
 - The tests use `jsonplaceholder_base_url` and `default_timeout_seconds`.
 - Module tests pass with `python -m pytest tests/learning/test_05_crud -v`.
 - The full suite passes with `python -m pytest tests/ -v`.
 - Docs explicitly warn that JSONPlaceholder write operations are simulated.
-

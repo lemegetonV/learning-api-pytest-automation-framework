@@ -107,9 +107,9 @@ The key is to avoid writing false assertions. A test should document what the ta
 
 ## Code References
 
-- `tests/learning/test_05_crud/test_crud_lifecycle.py::test_simulated_crud_lifecycle_documents_each_step`
-- `tests/learning/test_05_crud/test_crud_lifecycle.py::test_create_then_delete_created_id_documents_fake_persistence`
-- `tests/learning/test_05_crud/test_crud_lifecycle.py::test_multiple_patch_responses_are_independent_with_fake_persistence`
+- [`test_crud_lifecycle.py`](../../tests/learning/test_05_crud/test_crud_lifecycle.py) `::test_simulated_crud_lifecycle_documents_each_step`
+- [`test_crud_lifecycle.py`](../../tests/learning/test_05_crud/test_crud_lifecycle.py) `::test_create_then_delete_created_id_documents_fake_persistence`
+- [`test_crud_lifecycle.py`](../../tests/learning/test_05_crud/test_crud_lifecycle.py) `::test_multiple_patch_responses_are_independent_with_fake_persistence`
 
 ## Key Takeaways
 

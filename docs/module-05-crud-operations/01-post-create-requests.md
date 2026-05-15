@@ -134,10 +134,10 @@ JSONPlaceholder does not persist creates, so this risk is only discussed here. L
 
 ## Code References
 
-- `tests/learning/test_05_crud/test_create.py::test_create_post_returns_201_and_echoes_payload`
-- `tests/learning/test_05_crud/test_create.py::test_created_post_has_server_generated_id`
-- `tests/learning/test_05_crud/test_create.py::test_create_post_with_minimal_payload_documents_lenient_api`
-- `tests/learning/test_05_crud/test_create.py::test_create_post_with_empty_payload_documents_lenient_api`
+- [`test_create.py`](../../tests/learning/test_05_crud/test_create.py) `::test_create_post_returns_201_and_echoes_payload`
+- [`test_create.py`](../../tests/learning/test_05_crud/test_create.py) `::test_created_post_has_server_generated_id`
+- [`test_create.py`](../../tests/learning/test_05_crud/test_create.py) `::test_create_post_with_minimal_payload_documents_lenient_api`
+- [`test_create.py`](../../tests/learning/test_05_crud/test_create.py) `::test_create_post_with_empty_payload_documents_lenient_api`
 
 ## Key Takeaways
 

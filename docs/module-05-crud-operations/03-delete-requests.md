@@ -93,9 +93,9 @@ Those topics become more important in Modules 08, 09, and 15.
 
 ## Code References
 
-- `tests/learning/test_05_crud/test_delete.py::test_delete_post_returns_200_and_empty_object`
-- `tests/learning/test_05_crud/test_delete.py::test_delete_nonexistent_post_documents_lenient_api`
-- `tests/learning/test_05_crud/test_delete.py::test_delete_then_get_documents_simulated_persistence`
+- [`test_delete.py`](../../tests/learning/test_05_crud/test_delete.py) `::test_delete_post_returns_200_and_empty_object`
+- [`test_delete.py`](../../tests/learning/test_05_crud/test_delete.py) `::test_delete_nonexistent_post_documents_lenient_api`
+- [`test_delete.py`](../../tests/learning/test_05_crud/test_delete.py) `::test_delete_then_get_documents_simulated_persistence`
 
 ## Key Takeaways
 
@@ -104,4 +104,3 @@ Those topics become more important in Modules 08, 09, and 15.
 - Real APIs should usually verify deletion with a follow-up `GET`.
 - JSONPlaceholder simulates deletion but does not persist it.
 - DELETE is idempotent in final state, even if status codes vary by API.
-

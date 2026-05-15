@@ -118,10 +118,10 @@ Do not assume that `PUT` and `PATCH` behave the same just because both update da
 
 ## Code References
 
-- `tests/learning/test_05_crud/test_update.py::test_put_replaces_post_and_preserves_id`
-- `tests/learning/test_05_crud/test_update.py::test_patch_updates_only_title_and_preserves_other_fields`
-- `tests/learning/test_05_crud/test_update.py::test_put_nonexistent_post_documents_jsonplaceholder_500`
-- `tests/learning/test_05_crud/test_update.py::test_patch_with_unknown_field_documents_lenient_api`
+- [`test_update.py`](../../tests/learning/test_05_crud/test_update.py) `::test_put_replaces_post_and_preserves_id`
+- [`test_update.py`](../../tests/learning/test_05_crud/test_update.py) `::test_patch_updates_only_title_and_preserves_other_fields`
+- [`test_update.py`](../../tests/learning/test_05_crud/test_update.py) `::test_put_nonexistent_post_documents_jsonplaceholder_500`
+- [`test_update.py`](../../tests/learning/test_05_crud/test_update.py) `::test_patch_with_unknown_field_documents_lenient_api`
 
 ## Key Takeaways
 
@@ -131,4 +131,3 @@ Do not assume that `PUT` and `PATCH` behave the same just because both update da
 - Idempotency affects retry safety.
 - Missing-resource update behavior must be tested because APIs differ.
 - JSONPlaceholder's `500` on missing update is observed behavior, not an ideal API design.
-
