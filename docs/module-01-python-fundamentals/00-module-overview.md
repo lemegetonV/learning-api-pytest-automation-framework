@@ -54,16 +54,17 @@ is built from Module 01 pieces:
 
 | File | Purpose |
 |---|---|
-| `docs/module-01-python-fundamentals/00-module-overview.md` | Module map and learning goals |
-| `docs/module-01-python-fundamentals/01-values-variables-and-types.md` | First Python concept guide |
-| `docs/module-01-python-fundamentals/02-control-flow.md` | Decisions, loops, retries, and repeated checks |
-| `docs/module-01-python-fundamentals/03-functions.md` | Reusable behavior and helper design |
-| `docs/module-01-python-fundamentals/04-data-structures.md` | Lists, dictionaries, tuples, sets, and JSON-shaped data |
-| `docs/module-01-python-fundamentals/05-error-handling.md` | Exceptions, assertions, negative testing, and failure clarity |
-| `docs/module-01-python-fundamentals/06-python-qa-idioms.md` | F-strings, casting, truthiness, `range`, `*args`, lambdas, comprehensions, custom exceptions, and debugging |
-| `docs/module-01-python-fundamentals/exercises.md` | QA-focused practice tasks |
+| [`00-module-overview.md`](00-module-overview.md) | Module map and learning goals |
+| [`01-values-variables-and-types.md`](01-values-variables-and-types.md) | First Python concept guide |
+| [`02-control-flow.md`](02-control-flow.md) | Decisions, loops, retries, and repeated checks |
+| [`03-functions.md`](03-functions.md) | Reusable behavior and helper design |
+| [`04-data-structures.md`](04-data-structures.md) | Lists, dictionaries, tuples, sets, and JSON-shaped data |
+| [`05-error-handling.md`](05-error-handling.md) | Exceptions, assertions, negative testing, and failure clarity |
+| [`06-python-qa-idioms.md`](06-python-qa-idioms.md) | F-strings, casting, truthiness, `range`, `*args`, lambdas, comprehensions, custom exceptions, and debugging |
+| [`07-checkpoint-deep-dive.md`](07-checkpoint-deep-dive.md) | Module checkpoint review, failure model, interview prompts, and revision checklist |
+| [`exercises.md`](exercises.md) | QA-focused practice tasks |
 
-No `src/` or `tests/` implementation files are introduced yet. The real project code begins in Module 03, and API tests begin in Module 04.
+No [`src/`](../../src/) or [`tests/`](../../tests/) implementation files are introduced yet. The real project code begins in Module 03, and API tests begin in Module 04.
 
 ## Concept Map
 
